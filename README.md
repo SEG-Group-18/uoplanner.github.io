@@ -23,3 +23,10 @@ UOPlanner is a website designed to help uOttawa students create their course sch
 Users enter their program of study and year of study. The website then generates all possible schedule combinations based on their courses, allowing students to choose the schedule that works best for them.
 
 The goal of UOPlanner is to make course planning easier and help students navigate the scheduling process without having to manually search through uoZone for different course combinations.
+
+HTML Pages
+
+Home Page - Samuel / Robin
+Product Features Page - James
+Pricing page - Queren
+Team Page - Lamar
