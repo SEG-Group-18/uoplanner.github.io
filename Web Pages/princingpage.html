@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pricing | UOPlanner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;800&family=Public+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pricingpage.css">
+<script>
+  var d = document.documentElement, saved;
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('js');
+  try { saved = localStorage.getItem('uop-theme'); } catch (e) {}
+  d.dataset.theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+</script>
+<script src="pricingpage.js" defer></script>
+</head>
+<body>
 
+<header class="navbar">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="UOPlanner home" data-i18n-aria="brand.aria"><span class="logo" aria-hidden="true">UO</span>UOPlanner</a>
+    <div class="nav-right">
+      <nav aria-label="Main" data-i18n-aria="nav.label">
+        <ul class="nav-links">
+          <li><a href="index.html" data-i18n="nav.home">Home Page</a></li>
+          <li><a href="product.html" data-i18n="nav.product">Our Product</a></li>
+          <li><a href="team.html" data-i18n="nav.team">Our Team</a></li>
+        </ul>
+      </nav>
+      <div class="tools">
+        <button class="tool lang" type="button" aria-label="Switch to French">FR</button>
+        <button class="tool theme" type="button" aria-label="Switch to dark mode">
+          <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="hero-band">
+    <video class="bg-video" autoplay muted loop playsinline preload="auto" poster="pricingpage-bg.jpg" aria-hidden="true" tabindex="-1">
+      <source src="pricingpage-bg.mp4" type="video/mp4">
+    </video>
+    <div class="aurora" aria-hidden="true"><span class="blob a"></span><span class="blob b"></span><span class="blob c"></span></div>
+    <section class="wrap hero" aria-labelledby="t">
+      <h1 id="t" data-i18n="hero.title" data-split>UOPlanner runs completely free.</h1>
+      <p data-i18n="hero.text">We only make money from occasional ads. Students are already struggling financially, so it&rsquo;s the least we can do.</p>
+    </section>
+  </div>
+
+  <div class="wrap">
+    <div class="week">
+      <!-- Component 1 -->
+      <article class="block b1">
+        <h2 data-i18n="b1.title">Tell us your program</h2>
+        <div class="price">$0</div>
+        <p data-i18n="b1.text">Enter your program of study and your year of study.</p>
+      </article>
+
+      <!-- Component 2 -->
+      <article class="block b2">
+        <h2 data-i18n="b2.title">Get every schedule</h2>
+        <div class="price">$0</div>
+        <p data-i18n="b2.text">We build every possible combination of your courses, so you don&rsquo;t have to dig through uoZone one by one.</p>
+      </article>
+
+      <!-- Component 3 -->
+      <article class="block b3">
+        <h2 data-i18n="b3.title">Pick the one you like</h2>
+        <div class="price">$0</div>
+        <p data-i18n="b3.text">Keep the schedule that works best for you.</p>
+      </article>
+    </div>
+  </div>
+
+  <section class="cta" aria-labelledby="cta-title">
+    <div class="aurora" aria-hidden="true"><span class="blob a"></span><span class="blob b"></span></div>
+    <div class="wrap">
+      <h2 id="cta-title" data-i18n="cta.title">Plan your schedule.</h2>
+      <a class="btn-glass" href="index.html"><span data-i18n="cta.button">Start planning</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <small>&copy; 2026 UOPlanner</small>
+    <ul>
+      <li><a href="index.html" data-i18n="nav.home">Home Page</a></li>
+      <li><a href="product.html" data-i18n="nav.product">Our Product</a></li>
+      <li><a href="pricingpage.html" data-i18n="footer.pricing">Pricing</a></li>
+      <li><a href="team.html" data-i18n="nav.team">Our Team</a></li>
+    </ul>
+  </div>
+</footer>
+
+<button class="music" type="button" aria-pressed="false">
+  <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>
+  <span class="music-label" data-i18n="music.off">Music off</span>
+</button>
+
+</body>
+</html>
