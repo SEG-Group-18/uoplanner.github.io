@@ -1,1 +1,18 @@
+Colors
+------------
+UOttawa Red
+#8F001A
 
+UOttawa Gray
+#80746C
+
+Fonts
+------------
+
+
+Buttons
+------------
+
+
+Other
+------------
