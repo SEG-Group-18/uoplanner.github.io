@@ -8,11 +8,38 @@ UOttawa Gray
 
 Fonts
 ------------
+Georgia (serif)
+Segoe-UI(sans-serif)
 
+CODE FOR THE TOP BAND (HAVE TO CHANGE THE NAME OF THE PAGES)
+---------------------------------------------------------------
+<header>
+  <a href="index.html" class="brand">
+    <img src="logo.png" alt="UOPlanner logo" width="40" height="40"> UOPlanner
+  </a>
+  <nav aria-label="Main">
+    <ul>
+      <li><a href="product.html">Our Product</a></li>
+      <li><a href="pricingpage.html">Pricing</a></li>
+      <li><a href="team.html">Our Team</a></li>
+    </ul>
+  </nav>
+</header>
 
-Buttons
-------------
+<style>
+  :root { --red: #8F001A; --gray: #80746C; }
 
+  header { background: var(--gray); color: #fff; padding: .75rem 2rem;
+           display: flex; flex-wrap: wrap; align-items: center;
+           justify-content: space-between; gap: 1rem;
+           border-bottom: 4px solid var(--red); }
+  nav ul { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; margin: 0; padding: 0; }
 
-Other
-------------
+  .brand { display: flex; align-items: center; gap: .6rem; color: #fff;
+           font: 700 1.5rem Georgia, serif; text-decoration: none; }
+
+  nav a { display: block; padding: .5rem 1rem; color: #fff; font-weight: 600;
+          border: 2px solid #fff; border-radius: 4px; text-decoration: none; }
+  nav a:hover { background: var(--red); border-color: var(--red); }
+  header :focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+</style>
