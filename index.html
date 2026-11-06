@@ -4,13 +4,57 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home | UOPlanner</title>
+  <style>
+    :root { --red: #8F001A; --gray: #80746C; --light: #f6f4f2; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: flex; flex-direction: column;
+           font-family: "Segoe UI", system-ui, Arial, sans-serif; color: #2a2522; }
+    a { color: var(--red); }
+
+  
+    header, footer { background: var(--gray); color: #fff; padding: .75rem 2rem;
+                     display: flex; flex-wrap: wrap; align-items: center;
+                     justify-content: space-between; gap: 1rem; }
+    header { border-bottom: 4px solid var(--red); }
+    footer { margin-top: auto; }
+    footer ul, nav ul { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; margin: 0; padding: 0; }
+    footer a { color: #fff; margin-left: .75rem; }
+
+    .brand { display: flex; align-items: center; gap: .6rem; color: #fff;
+             font: 700 1.5rem Georgia, serif; text-decoration: none; }
+    nav a { display: block; padding: .5rem 1rem; color: #fff; font-weight: 600;
+            border: 2px solid #fff; border-radius: 4px; text-decoration: none; }
+    nav a:hover { background: var(--red); border-color: var(--red); }
+    header :focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+   
+    main { max-width: 64rem; width: 100%; margin: 0 auto; padding: 0 2rem 3rem; }
+    h1 { text-align: center; color: var(--red); font: 700 clamp(1.8rem, 5vw, 2.75rem) Georgia, serif; margin: 3rem 0; }
+
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+    blockquote { margin: 0; text-align: center; color: #5c524b;
+                 font: italic 1.75rem Georgia, serif; }
+    .cta { display: block; width: fit-content; margin: 2rem auto 0; padding: 1rem 2.5rem;
+           background: var(--red); color: #fff; border: 3px solid var(--red); border-radius: 4px;
+           font-size: 1.25rem; font-weight: 700; text-decoration: none; }
+    .cta:hover { background: #fff; color: var(--red); }
+
+    .preview { border: 3px solid var(--red); padding: 1rem; }
+    .preview h2 { margin: 0 0 .75rem; font: 1.15rem Georgia, serif; text-align: center; }
+    table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: .85rem; }
+    th { background: var(--red); color: #fff; padding: .5rem 0; }
+    td { height: 3.5rem; text-align: center; border: 1px solid #e9e6e3; }
+    td.course { background: var(--light); font-weight: 600; cursor: pointer; }
+    td.course.on { background: var(--red); color: #fff; }
+
+    @media (max-width: 45rem) { .grid { grid-template-columns: 1fr; } header, footer { padding: .75rem 1.25rem; } }
+  </style>
 </head>
 <body>
 
   <header>
-    <a href="index.html">
-      <img src="logo.png" alt="UOPlanner logo" width="40" height="40">
-      UOPlanner
+    <a href="index.html" class="brand">
+      <img src="logo.png" alt="UOPlanner logo" width="40" height="40"> UOPlanner
     </a>
     <nav aria-label="Main">
       <ul>
@@ -22,48 +66,28 @@
   </header>
 
   <main>
-    <section>
-      <h1>University of Ottawa Planner</h1>
-    </section>
+    <h1>University of Ottawa Planner</h1>
 
-    <section>
-      <figure>
-        <blockquote>
-          <p>&ldquo;Your schedule, your success&rdquo;</p>
-        </blockquote>
-      </figure>
+    <div class="grid">
+      <div>
+        <blockquote><p>&ldquo;Your schedule, your success&rdquo;</p></blockquote>
+        <a class="cta" href="#">Try it Now!</a>
+      </div>
 
-      <article>
+      <article class="preview">
         <h2>Preview of a sample schedule</h2>
         <table>
-          <caption>Sample weekly schedule</caption>
           <thead>
-            <tr>
-              <th scope="col">Mon</th>
-              <th scope="col">Tue</th>
-              <th scope="col">Wed</th>
-              <th scope="col">Thu</th>
-              <th scope="col">Fri</th>
-            </tr>
+            <tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Course A</td><td></td><td>Course A</td><td></td><td>Lab</td>
-            </tr>
-            <tr>
-              <td></td><td>Course B</td><td></td><td>Course B</td><td></td>
-            </tr>
-            <tr>
-              <td>Course C</td><td></td><td>Course C</td><td></td><td></td>
-            </tr>
+            <tr><td>Course A</td><td></td><td>Course A</td><td></td><td>Lab</td></tr>
+            <tr><td></td><td>Course B</td><td></td><td>Course B</td><td></td></tr>
+            <tr><td>Course C</td><td></td><td>Course C</td><td></td><td></td></tr>
           </tbody>
         </table>
       </article>
-    </section>
-
-    <section>
-      <a href="#">Try it Now!</a>
-    </section>
+    </div>
   </main>
 
   <footer>
@@ -76,5 +100,22 @@
     </ul>
   </footer>
 
+  <script>
+   
+    const cells = [...document.querySelectorAll("tbody td")].filter(td => td.textContent.trim());
+    cells.forEach(td => {
+      td.classList.add("course");
+      td.tabIndex = 0;
+      const show = () => cells.forEach(c => c.classList.toggle("on", c.textContent === td.textContent));
+      const hide = () => cells.forEach(c => c.classList.remove("on"));
+      td.onmouseenter = td.onfocus = show;
+      td.onmouseleave = td.onblur = hide;
+    });
+
+    document.querySelector(".cta").onclick = e => {
+      e.preventDefault();
+      document.querySelector(".preview").scrollIntoView({ behavior: "smooth" });
+    };
+  </script>
 </body>
 </html>
