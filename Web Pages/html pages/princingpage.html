@@ -4,29 +4,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pricing | UOPlanner</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;800&family=Public+Sans:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="pricingpage.css">
+<link rel="stylesheet" href="../../css/styles.css">
 <script>
   var d = document.documentElement, saved;
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('js');
   try { saved = localStorage.getItem('uop-theme'); } catch (e) {}
   d.dataset.theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 </script>
-<script src="pricingpage.js" defer></script>
+<script src="../js%20pages/pricingpage.js" defer></script>
 </head>
-<body>
+<body class="pricing-page">
 
 <header class="navbar">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="UOPlanner home" data-i18n-aria="brand.aria"><span class="logo" aria-hidden="true">UO</span>UOPlanner</a>
+    <a class="brand" href="../../index.html" aria-label="UOPlanner home" data-i18n-aria="brand.aria"><span class="logo" aria-hidden="true">UO</span>UOPlanner</a>
     <div class="nav-right">
       <nav aria-label="Main" data-i18n-aria="nav.label">
         <ul class="nav-links">
-          <li><a href="index.html" data-i18n="nav.home">Home Page</a></li>
-          <li><a href="product.html" data-i18n="nav.product">Our Product</a></li>
-          <li><a href="team.html" data-i18n="nav.team">Our Team</a></li>
+          <li><a href="../../index.html" data-i18n="nav.home">Home Page</a></li>
+          <li><a href="productfeatures.html" data-i18n="nav.product">Our Product</a></li>
+          <li><a href="teampage.html" data-i18n="nav.team">Our Team</a></li>
         </ul>
       </nav>
       <div class="tools">
@@ -42,10 +39,9 @@
 
 <main>
   <div class="hero-band">
-    <video class="bg-video" autoplay muted loop playsinline preload="auto" poster="pricingpage-bg.jpg" aria-hidden="true" tabindex="-1">
-      <source src="pricingpage-bg.mp4" type="video/mp4">
+    <video class="bg-video" autoplay muted loop playsinline preload="auto" poster="../../media/pricingpage-bg.jpg" aria-hidden="true" tabindex="-1">
+      <source src="../../media/pricingpage-bg.mp4" type="video/mp4">
     </video>
-    <div class="aurora" aria-hidden="true"><span class="blob a"></span><span class="blob b"></span><span class="blob c"></span></div>
     <section class="wrap hero" aria-labelledby="t">
       <h1 id="t" data-i18n="hero.title" data-split>UOPlanner runs completely free.</h1>
       <p data-i18n="hero.text">We only make money from occasional ads. Students are already struggling financially, so it&rsquo;s the least we can do.</p>
@@ -78,10 +74,9 @@
   </div>
 
   <section class="cta" aria-labelledby="cta-title">
-    <div class="aurora" aria-hidden="true"><span class="blob a"></span><span class="blob b"></span></div>
     <div class="wrap">
       <h2 id="cta-title" data-i18n="cta.title">Plan your schedule.</h2>
-      <a class="btn-glass" href="index.html"><span data-i18n="cta.button">Start planning</span></a>
+      <a class="btn-glass" href="../../index.html"><span data-i18n="cta.button">Start planning</span></a>
     </div>
   </section>
 </main>
@@ -90,10 +85,10 @@
   <div class="wrap">
     <small>&copy; 2026 UOPlanner</small>
     <ul>
-      <li><a href="index.html" data-i18n="nav.home">Home Page</a></li>
-      <li><a href="product.html" data-i18n="nav.product">Our Product</a></li>
-      <li><a href="pricingpage.html" data-i18n="footer.pricing">Pricing</a></li>
-      <li><a href="team.html" data-i18n="nav.team">Our Team</a></li>
+      <li><a href="../../index.html" data-i18n="nav.home">Home Page</a></li>
+      <li><a href="productfeatures.html" data-i18n="nav.product">Our Product</a></li>
+      <li><a href="princingpage.html" data-i18n="footer.pricing">Pricing</a></li>
+      <li><a href="teampage.html" data-i18n="nav.team">Our Team</a></li>
     </ul>
   </div>
 </footer>
