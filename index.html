@@ -4,80 +4,97 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home | UOPlanner</title>
+  <script>
+    var d = document.documentElement, saved;
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('js');
+    try { saved = localStorage.getItem('uop-theme'); } catch (e) {}
+    d.dataset.theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  </script>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="home-page">
 
-  <header>
-    <a href="index.html" class="brand">
-      <span class="logo" aria-hidden="true">UO</span> UOPlanner
-    </a>
-    <nav aria-label="Main">
-      <ul>
-        <li><a href="Web%20Pages/html%20pages/productfeatures.html">Our Product</a></li>
-        <li><a href="Web%20Pages/html%20pages/princingpage.html">Pricing</a></li>
-        <li><a href="Web%20Pages/html%20pages/teampage.html">Our Team</a></li>
-      </ul>
+  <header class ="navbar">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="UOPlanner home" data-i18n-aria="brand.aria"><span class="logo" aria-hidden="true">UO</span>UOPlanner</a>
+        <div class = "nav-right">
+          <nav aria-label="Main" data-i18n-aria="nav.label">
+            <ul class="nav-links">
+              <li><a href="Web%20Pages/html%20pages/productfeatures.html" data-i18n="nav.product">Our Product</a></li>
+              <li><a href="Web%20Pages/html%20pages/princingpage.html" data-i18n="nav.pricing">Pricing</a></li>
+              <li><a href="Web%20Pages/html%20pages/teampage.html" data-i18n="nav.team">Our Team</a></li>
+            </ul>
     </nav>
+    <div class="tools">
+    <button class="tool lang" type="button" aria-label="Switch to French">FR</button>
+    <button class="tool theme" type="button" aria-label="Switch to dark mode">
+    <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+  </button>
+</div>
+</div>
+</div>
   </header>
 
   <main class="home-main">
-    <section class="hero-band">
-      <video class="bg-video" autoplay muted loop playsinline preload="metadata" poster="media/pricingpage-bg.jpg" aria-hidden="true" tabindex="-1">
-        <source src="media/pricingpage-bg.mp4" type="video/mp4">
-      </video>
-      <div class="wrap hero">
-        <h1>University of Ottawa Planner</h1>
-        <p>Build a course schedule that works for you.</p>
-      </div>
-    </section>
-
-    <div class="home-content">
-      <div class="grid">
-        <div>
-          <blockquote><p>&ldquo;Your schedule, your success&rdquo;</p></blockquote>
-          <a class="cta" href="#preview">Try it Now!</a>
-        </div>
-
-        <article class="preview" id="preview">
-          <h2>Preview of a sample schedule</h2>
-          <table>
-            <thead>
-              <tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Course A</td><td></td><td>Course A</td><td></td><td>Lab</td></tr>
-              <tr><td></td><td>Course B</td><td></td><td>Course B</td><td></td></tr>
-              <tr><td>Course C</td><td></td><td>Course C</td><td></td><td></td></tr>
-            </tbody>
-          </table>
-        </article>
-      </div>
+  <section class="hero-band">
+    <video class="bg-video" autoplay muted loop playsinline preload="metadata" poster="media/pricingpage-bg.jpg" aria-hidden="true" tabindex="-1">
+      <source src="media/pricingpage-bg.mp4" type="video/mp4">
+    </video>
+    <div class="wrap hero">
+      <h1 data-i18n="hero.title" data-split>University of Ottawa Planner</h1>
+      <p data-i18n="hero.text">Build a course schedule that works for you.</p>
     </div>
-  </main>
+  </section>
 
-  <footer>
+  <div class="home-content">
+    <div class="grid">
+      <div>
+        <blockquote><p data-i18n="hero.quote">&ldquo;Your schedule, your success&rdquo;</p></blockquote>
+        <a class="cta" href="#preview" data-i18n="cta.button">Try it Now!</a>
+      </div>
+
+      <article class="preview" id="preview">
+        <h2 data-i18n="preview.title">Preview of a sample schedule</h2>
+        <table>
+          <thead>
+            <tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Course A</td><td></td><td>Course A</td><td></td><td>Lab</td></tr>
+            <tr><td></td><td>Course B</td><td></td><td>Course B</td><td></td></tr>
+            <tr><td>Course C</td><td></td><td>Course C</td><td></td><td></td></tr>
+          </tbody>
+        </table>
+      </article>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
     <small>&copy; 2026 UOPlanner</small>
     <ul>
-      <li><a href="index.html">Home Page</a></li>
-      <li><a href="Web%20Pages/html%20pages/productfeatures.html">Our Product</a></li>
-      <li><a href="Web%20Pages/html%20pages/princingpage.html">Pricing</a></li>
-      <li><a href="Web%20Pages/html%20pages/teampage.html">Our Team</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Home Page</a></li>
+      <li><a href="Web%20Pages/html%20pages/productfeatures.html" data-i18n="nav.product">Our Product</a></li>
+      <li><a href="Web%20Pages/html%20pages/princingpage.html" data-i18n="nav.pricing">Pricing</a></li>
+      <li><a href="Web%20Pages/html%20pages/teampage.html" data-i18n="nav.team">Our Team</a></li>
     </ul>
-  </footer>
+  </div>
+</footer>
 
-  <script>
-   
-    const cells = [...document.querySelectorAll("tbody td")].filter(td => td.textContent.trim());
-    cells.forEach(td => {
-      td.classList.add("course");
-      td.tabIndex = 0;
-      const show = () => cells.forEach(c => c.classList.toggle("on", c.textContent === td.textContent));
-      const hide = () => cells.forEach(c => c.classList.remove("on"));
-      td.onmouseenter = td.onfocus = show;
-      td.onmouseleave = td.onblur = hide;
-    });
+<script>
+  const cells = [...document.querySelectorAll("tbody td")].filter(td => td.textContent.trim());
+  cells.forEach(td => {
+    td.classList.add("course");
+    td.tabIndex = 0;
+    const show = () => cells.forEach(c => c.classList.toggle("on", c.textContent === td.textContent));
+    const hide = () => cells.forEach(c => c.classList.remove("on"));
+    td.onmouseenter = td.onfocus = show;
+    td.onmouseleave = td.onblur = hide;
+  });
+</script>
+<script src="Web%20Pages/js%20pages/homepage.js"></script>
 
-  </script>
 </body>
 </html>
