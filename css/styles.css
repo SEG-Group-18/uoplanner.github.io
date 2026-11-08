@@ -184,7 +184,10 @@ td.course.on { background: var(--red); color: #fff; }
   padding: 0;
   list-style: none;
 }
-.feature-list li { padding: 1.25rem 1.5rem; border-left: 5px solid var(--red); background: var(--soft); font-size: 1.1rem; }
+.feature-list li { padding: 1.25rem 1.5rem; border-left: 5px solid var(--red); background: var(--soft); font-size: 1.1rem; transition: transform .25s var(--ease), box-shadow .3s; }
+.feature-list li:hover { transform: translateY(-2px); box-shadow: 0 14px 30px -16px rgba(0,0,0,.4); }
+.js .feature-list li:not(.in) { opacity: 0; }
+.feature-list li.in { animation: block-drop .7s var(--ease) backwards; animation-delay: var(--d, 0ms); }
 .team-page main { width: 100%; padding: 0; }
 .team-page main > .hero-band { margin-bottom: 2.5rem; }
 .team-page main > .hero-band .hero { padding-block: clamp(3.5rem, 8vw, 6rem); }
