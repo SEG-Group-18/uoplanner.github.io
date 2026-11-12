@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { CalendarMotion } from "@/components/CalendarMotion";
 import { CourseCalendar } from "@/components/CourseCalendar";
+import { Interactive3DScene } from "@/components/Interactive3DScene";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { useSite } from "@/components/SiteProvider";
 
@@ -35,7 +35,7 @@ export default function HomePage() {
             </div>
           </ScrollReveal>
           <ScrollReveal className="hero-art-space hero-calendar-art" variant="scale" delayMs={160}>
-            <CalendarMotion />
+            <Interactive3DScene kind="product" />
           </ScrollReveal>
         </div>
       </section>

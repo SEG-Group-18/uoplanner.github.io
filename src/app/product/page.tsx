@@ -1,6 +1,8 @@
 "use client";
 
 import { useSite } from "@/components/SiteProvider";
+import { ContentHero } from "@/components/ContentHero";
+import { Interactive3DScene } from "@/components/Interactive3DScene";
 import {
   useEffect,
   useRef,
@@ -14,7 +16,41 @@ export default function ProductPage() {
   const [selectedFeature, setSelectedFeature] = useState<number | null>(null);
   const [isClosing, setIsClosing] = useState(false);
   const featureDialog = useRef<HTMLDialogElement>(null);
+  const featureList = useRef<HTMLOListElement>(null);
   const closeTimeout = useRef<number | null>(null);
+
+  useEffect(() => {
+    const list = featureList.current;
+    if (!list || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
+    const rows = Array.from(list.querySelectorAll("li"));
+    if (!("IntersectionObserver" in window)) {
+      rows.forEach((row) => row.classList.add("is-visible"));
+      return;
+    }
+
+    list.classList.add("is-scroll-ready");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -56px 0px" },
+    );
+    rows.forEach((row) => observer.observe(row));
+
+    return () => {
+      observer.disconnect();
+      list.classList.remove("is-scroll-ready");
+      rows.forEach((row) => row.classList.remove("is-visible"));
+    };
+  }, []);
 
   useEffect(() => {
     if (selectedFeature !== null && !featureDialog.current?.open) {
@@ -59,15 +95,14 @@ export default function ProductPage() {
 
   return (
     <main>
-      <section className="content-hero">
-        <div className="content-hero-inner">
-          <p className="eyebrow">{message.productKicker}</p>
-          <h1>{message.productTitle}</h1>
-          <p>{message.productText}</p>
-        </div>
-      </section>
+      <ContentHero
+        eyebrow={message.productKicker}
+        title={message.productTitle}
+        description={message.productText}
+        scene="product"
+      />
       <section className="content-section">
-        <ol className="feature-list">
+        <ol ref={featureList} className="feature-list">
           {message.productFeatures.map((feature, index) => (
             <li
               key={feature.title}
@@ -133,6 +168,9 @@ export default function ProductPage() {
               >
                 ×
               </button>
+            </div>
+            <div className="feature-preview">
+              <Interactive3DScene kind="feature" featureIndex={selectedFeature} />
             </div>
             <span className="feature-dialog-icon" aria-hidden="true">
               {String(selectedFeature + 1).padStart(2, "0")}

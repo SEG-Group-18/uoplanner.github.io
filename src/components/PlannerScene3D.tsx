@@ -37,7 +37,7 @@ function CalendarTile({ position, rotation, dark }: TileProps) {
       )}
       <mesh position={[0, -0.235, 0.032]}>
         <boxGeometry args={[0.3, 0.018, 0.014]} />
-        <meshStandardMaterial color="#8f001a" roughness={0.42} />
+        <meshStandardMaterial color="#7A0019" roughness={0.42} />
       </mesh>
     </group>
   );
@@ -97,7 +97,7 @@ function PlannerObject({
         </mesh>
         <mesh rotation={[0.28, 0.12, -0.42]}>
           <torusGeometry args={[1.04, 0.018, 8, 120]} />
-          <meshStandardMaterial color="#8f001a" roughness={0.38} metalness={0.35} />
+          <meshStandardMaterial color="#7A0019" roughness={0.38} metalness={0.35} />
         </mesh>
         <mesh rotation={[1.12, -0.26, 0.42]}>
           <torusGeometry args={[1.16, 0.009, 8, 120]} />
@@ -105,7 +105,7 @@ function PlannerObject({
         </mesh>
         <mesh position={[0.12, 1.04, 0.3]}>
           <sphereGeometry args={[0.055, 16, 16]} />
-          <meshStandardMaterial color="#8f001a" emissive="#8f001a" emissiveIntensity={0.18} />
+          <meshStandardMaterial color="#7A0019" emissive="#7A0019" emissiveIntensity={0.18} />
         </mesh>
       </group>
     </Float>

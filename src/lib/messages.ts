@@ -84,6 +84,12 @@ type Messages = {
   teamMissionKicker: string;
   teamMissionTitle: string;
   teamMissionText: string;
+  teamRole: string;
+  teamProgram: string;
+  teamProgramLabel: string;
+  teamContributionLabel: string;
+  teamExpandAction: string;
+  teamCollapseAction: string;
   teamChallenges: { title: string; text: string }[];
   footerText: string;
 };
@@ -264,6 +270,12 @@ export const messages: Record<Locale, Messages> = {
     teamMissionTitle: "Small scheduling snags add up.",
     teamMissionText:
       "As a team, we ran into the familiar friction of comparing scattered course listings, checking that lectures and labs fit together, and weighing a conflict-free timetable against long gaps or inconvenient days. Those shared challenges shaped our goal: make schedule options easier to see and compare, while leaving official availability and registration in uoZone.",
+    teamRole: "UOPlanner co-creator",
+    teamProgram: "Software Engineering or Computer Science · University of Ottawa",
+    teamProgramLabel: "Program",
+    teamContributionLabel: "Contribution",
+    teamExpandAction: "Reveal contribution",
+    teamCollapseAction: "Return to portrait",
     teamChallenges: [
       {
         title: "Finding the right sections",
@@ -469,6 +481,12 @@ export const messages: Record<Locale, Messages> = {
     teamMissionTitle: "Les petits casse-têtes s’accumulent.",
     teamMissionText:
       "En équipe, nous avons connu les difficultés courantes : comparer des fiches de cours dispersées, vérifier que les cours magistraux et les laboratoires s’agencent, puis évaluer un horaire sans conflit mais rempli de longues pauses ou de journées peu pratiques. Ces défis communs ont orienté notre objectif : rendre les options d’horaire plus faciles à consulter et à comparer, tout en laissant la vérification des places et l’inscription officielle à uoZone.",
+    teamRole: "Co-créateur·rice d’UOPlanner",
+    teamProgram: "Génie logiciel ou informatique · Université d’Ottawa",
+    teamProgramLabel: "Programme",
+    teamContributionLabel: "Contribution",
+    teamExpandAction: "Voir la contribution",
+    teamCollapseAction: "Retour au portrait",
     teamChallenges: [
       {
         title: "Trouver les bons groupes",
