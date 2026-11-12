@@ -29,10 +29,14 @@ export default function TeamPage() {
             const challenge = message.teamChallenges[member.index];
             return (
               <article className="team-card" key={member.name}>
-                <Image className="team-avatar" src={member.image} alt="" width={76} height={76} />
-                <h2>{member.name}</h2>
-                <h3>{challenge.title}</h3>
-                <p>{challenge.text}</p>
+                <div className="team-member-heading">
+                  <Image className="team-avatar" src={member.image} alt="" width={76} height={76} />
+                  <div className="team-member-identity">
+                    <h2>{member.name}</h2>
+                    <h3>{challenge.title}</h3>
+                  </div>
+                </div>
+                <p className="team-member-description">{challenge.text}</p>
               </article>
             );
           })}
