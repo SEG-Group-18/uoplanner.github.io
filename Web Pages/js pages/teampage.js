@@ -27,7 +27,13 @@
       "nav.pricing": "Pricing",
       "nav.team": "Our Team",
       "hero.title": "About Our Team",
-      "hero.text": "Meet the people building a simpler way to plan your semester."
+      "hero.text": "Meet the people building a simpler way to plan your semester.",
+      "mission.kicker": "Our mission",
+      "mission.title": "Built by students, for students.",
+      "mission.text": "UOPlanner is created by software engineering and computer science students at the University of Ottawa who want to make a common academic planning challenge easier. Our team brings together technical development, product thinking, and user experience to turn a stressful task into a clearer, more manageable process. We believe a better-planned week can help students make room for their studies and their lives.",
+      "lang.switch": "Switch to French",
+      "theme.toDark": "Switch to dark mode",
+      "theme.toLight": "Switch to light mode"
     },
     fr: {
       "title": "Notre équipe | UOPlanner",
@@ -36,7 +42,13 @@
       "nav.pricing": "Tarifs",
       "nav.team": "Notre équipe",
       "hero.title": "À propos de notre équipe",
-      "hero.text": "Découvrez les personnes qui simplifient la planification de votre semestre."
+      "hero.text": "Découvrez les personnes qui simplifient la planification de votre semestre.",
+      "mission.kicker": "Notre mission",
+      "mission.title": "Créé par des étudiants, pour les étudiants.",
+      "mission.text": "UOPlanner est conçu par des étudiants en génie logiciel et en informatique de l’Université d’Ottawa qui souhaitent simplifier un défi courant de la planification universitaire. Notre équipe réunit développement technique, réflexion produit et expérience utilisateur pour transformer une tâche stressante en un processus plus clair et plus facile à gérer. Nous croyons qu’une semaine mieux planifiée aide les étudiants à faire de la place pour leurs études et leur vie.",
+      "lang.switch": "Passer en anglais",
+      "theme.toDark": "Passer en mode sombre",
+      "theme.toLight": "Passer en mode clair"
     }
   };
 
@@ -53,14 +65,33 @@
     document.querySelectorAll('[data-i18n]').forEach(el => {
       el.textContent = t(el.dataset.i18n);
     });
+    const langBtn = document.querySelector('.lang');
+    const themeBtn = document.querySelector('.theme');
+    if (langBtn) {
+      langBtn.textContent = lang === 'en' ? 'FR' : 'EN';
+      langBtn.setAttribute('aria-label', t('lang.switch'));
+    }
+    if (themeBtn) {
+      themeBtn.setAttribute('aria-label', t(root.dataset.theme === 'dark' ? 'theme.toLight' : 'theme.toDark'));
+    }
   };
 
   applyLang();
 
   /* 2. Theme */
 
-  root.dataset.theme =
-    store.get('uop-theme') === 'dark' ? 'dark' : 'light';
+  const savedTheme = store.get('uop-theme');
+  if (savedTheme) root.dataset.theme = savedTheme;
+  document.querySelector('.lang')?.addEventListener('click', () => {
+    lang = lang === 'en' ? 'fr' : 'en';
+    store.set('uop-lang', lang);
+    applyLang();
+  });
+  document.querySelector('.theme')?.addEventListener('click', () => {
+    root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    store.set('uop-theme', root.dataset.theme);
+    applyLang();
+  });
 
   /* 3. Navbar scroll effect */
 

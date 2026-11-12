@@ -1,0 +1,88 @@
+{
+  "projectType": "webapp",
+  "setup": [
+    {
+      "command": "npm",
+      "args": ["ci"],
+      "timeoutSeconds": 600
+    }
+  ],
+  "assertions": [
+    {
+      "name": "typescript-typecheck",
+      "kind": "process",
+      "command": "npm",
+      "args": ["run", "typecheck"],
+      "verificationMethod": "exit-code",
+      "expected": "0",
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "eslint-check",
+      "kind": "process",
+      "command": "npm",
+      "args": ["run", "lint"],
+      "verificationMethod": "exit-code",
+      "expected": "0",
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "static-production-build",
+      "kind": "process",
+      "command": "npm",
+      "args": ["run", "build"],
+      "verificationMethod": "exit-code",
+      "expected": "0",
+      "timeoutSeconds": 300
+    },
+    {
+      "name": "tests-pass",
+      "kind": "process",
+      "command": "npm",
+      "args": ["test"],
+      "verificationMethod": "test-results",
+      "expected": "0",
+      "timeoutSeconds": 300
+    },
+    {
+      "name": "home-route-200",
+      "kind": "http-probe",
+      "startCommand": "npm",
+      "startArgs": ["run", "dev", "--", "--hostname", "127.0.0.1", "--port", "3333"],
+      "url": "http://127.0.0.1:3333/",
+      "verificationMethod": "http-status",
+      "expected": "200",
+      "timeoutSeconds": 120
+    },
+    {
+      "name": "product-route-200",
+      "kind": "http-probe",
+      "startCommand": "npm",
+      "startArgs": ["run", "dev", "--", "--hostname", "127.0.0.1", "--port", "3333"],
+      "url": "http://127.0.0.1:3333/product/",
+      "verificationMethod": "http-status",
+      "expected": "200",
+      "timeoutSeconds": 120
+    },
+    {
+      "name": "pricing-route-200",
+      "kind": "http-probe",
+      "startCommand": "npm",
+      "startArgs": ["run", "dev", "--", "--hostname", "127.0.0.1", "--port", "3333"],
+      "url": "http://127.0.0.1:3333/pricing/",
+      "verificationMethod": "http-status",
+      "expected": "200",
+      "timeoutSeconds": 120
+    },
+    {
+      "name": "team-route-200",
+      "kind": "http-probe",
+      "startCommand": "npm",
+      "startArgs": ["run", "dev", "--", "--hostname", "127.0.0.1", "--port", "3333"],
+      "url": "http://127.0.0.1:3333/team/",
+      "verificationMethod": "http-status",
+      "expected": "200",
+      "timeoutSeconds": 120
+    }
+  ]
+}

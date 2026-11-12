@@ -20,12 +20,17 @@
       "nav.pricing": "Pricing",
       "nav.team": "Our Team",
       "hero.title": "Product Features",
-      "hero.text": "Plan your courses with fewer clicks and a clearer view of your options.",
-      "f1": "Enter your program of study and your year of study to get started.",
-      "f2": "Generates every possible schedule combination based on your courses.",
-      "f3": "No more digging through uoZone for different course combinations by hand.",
-      "f4": "Automatic course sequence syncing based off of programme/field of study.",
-      "f5": "Affiliated with the University of Ottawa",
+      "hero.text": "Build a conflict-free course schedule around your program and your priorities.",
+      "f1": "Select your program, year of study, and the courses you plan to take.",
+      "f2": "Generate schedule combinations and remove conflicts between lectures, labs, and discussion groups.",
+      "f3": "Compare weekly schedules visually instead of piecing together uoZone listings by hand.",
+      "f4": "Use Premium preferences to keep selected days free, reduce long breaks, or prioritize morning classes.",
+      "f5": "Review section codes and instructor details, then copy your codes to take to uoZone.",
+      "f6": "UOPlanner helps you plan; verify course availability and complete official registration in uoZone.",
+      "callout.kicker": "Your schedule, your priorities",
+      "callout.title": "Make your week fit your life.",
+      "callout.text": "Whether you need a day for work, family, campus activities, studying, or a breather, compare options that fit the routine you want.",
+      "callout.link": "Compare Free and Premium",
       "footer.pricing": "Pricing",
       "lang.switch": "Switch to French",
       "theme.toDark": "Switch to dark mode",
@@ -42,12 +47,17 @@
       "nav.pricing": "Tarifs",
       "nav.team": "Notre équipe",
       "hero.title": "Fonctionnalités du produit",
-      "hero.text": "Planifiez vos cours avec moins de clics et une vue plus claire de vos options.",
-      "f1": "Entrez votre programme d’études et votre année d’études pour commencer.",
-      "f2": "Génère toutes les combinaisons d’horaires possibles à partir de vos cours.",
-      "f3": "Fini la recherche manuelle de combinaisons de cours dans uoZone.",
-      "f4": "Synchronisation automatique de la séquence de cours selon le programme ou le domaine d’études.",
-      "f5": "Affilié à l’Université d’Ottawa",
+      "hero.text": "Créez un horaire sans conflit selon votre programme et vos priorités.",
+      "f1": "Choisissez votre programme, votre année d’études et les cours que vous souhaitez suivre.",
+      "f2": "Générez des combinaisons d’horaires et éliminez les conflits entre cours magistraux, laboratoires et groupes de discussion.",
+      "f3": "Comparez visuellement les horaires hebdomadaires au lieu d’assembler les fiches uoZone manuellement.",
+      "f4": "Avec Premium, gardez certaines journées libres, réduisez les longues pauses ou privilégiez les cours du matin.",
+      "f5": "Consultez les codes de section et les noms des enseignants, puis copiez les codes pour uoZone.",
+      "f6": "UOPlanner vous aide à planifier; vérifiez les places et terminez l’inscription officielle dans uoZone.",
+      "callout.kicker": "Votre horaire, vos priorités",
+      "callout.title": "Une semaine à votre image.",
+      "callout.text": "Pour le travail, la famille, les activités sur le campus, les études ou une pause, comparez des options adaptées à votre quotidien.",
+      "callout.link": "Comparer Gratuit et Premium",
       "footer.pricing": "Tarifs",
       "lang.switch": "Passer en anglais",
       "theme.toDark": "Passer en mode sombre",
@@ -192,7 +202,11 @@
     musicBtn.addEventListener('click', () => (playing ? stop() : start()));
     document.addEventListener('visibilitychange', () => {
       if (!ctx || !playing) return;
-      document.hidden ? ctx.suspend() : ctx.resume();
+      if (document.hidden) {
+        ctx.suspend();
+      } else {
+        ctx.resume();
+      }
     });
 
     // Browsers block sound until you interact, so if music was on for the

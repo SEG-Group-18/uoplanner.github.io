@@ -19,11 +19,46 @@
       "nav.product": "Our Product",
       "nav.pricing": "Pricing",
       "nav.team": "Our Team",
-      "hero.title": "University of Ottawa Planner",
-      "hero.text": "Build a course schedule that works for you.",
-      "hero.quote": "“Your schedule, your success”",
-      "cta.button": "Try it Now!",
-      "preview.title": "Preview of a sample schedule",
+      "hero.kicker": "COURSE PLANNING, MADE CLEARER",
+      "hero.title": "Plan your Ottawa semester with less stress",
+      "hero.text": "Compare valid course combinations, avoid timetable conflicts, and find a week that works for your life at uOttawa.",
+      "hero.link": "See how it works",
+      "cta.button": "Preview a sample week",
+      "intro.kicker": "A calmer way to plan",
+      "intro.title": "From course list to a week that works.",
+      "intro.text": "Registration can mean jumping between uoZone listings and trying to fit lectures, labs, and discussion groups together by hand. UOPlanner checks the combinations for schedule conflicts and lays out valid options so you can spend less time piecing together your week.",
+      "how.label": "How UOPlanner helps",
+      "step.one.title": "Choose your courses",
+      "step.one.text": "Start with your program, year of study, and the courses you plan to take.",
+      "step.two.title": "Review valid schedules",
+      "step.two.text": "Compare combinations of lectures, labs, and discussion groups without timetable overlaps.",
+      "step.three.title": "Take your plan to uoZone",
+      "step.three.text": "Choose a schedule that suits you, then confirm availability and complete registration in uoZone.",
+      "benefits.kicker": "Built around student life",
+      "benefits.title": "More than a calendar",
+      "benefits.text": "Balance classes with work, family, campus activities, and the time you need to study or recharge.",
+      "benefits.one.title": "Skip impossible combinations",
+      "benefits.one.text": "See schedule options without overlapping lectures, labs, or discussion groups.",
+      "benefits.two.title": "Make room for your week",
+      "benefits.two.text": "Use advanced preferences to keep a day free, reduce long gaps, or prioritize morning classes.",
+      "benefits.three.title": "Stay in control",
+      "benefits.three.text": "Compare your options here, then confirm course availability and register through uoZone.",
+      "premium.title": "Want more ways to fine-tune your schedule?",
+      "premium.text": "Explore Premium for advanced planning preferences at $10 per month.",
+      "preview.kicker": "See the week at a glance",
+      "preview.title": "A clearer view of your course week.",
+      "preview.text": "When classes are laid out side by side, it is easier to spot open time and compare where each option takes you.",
+      "preview.hint": "Hover over or focus a course to highlight its other meeting times.",
+      "preview.link": "Explore the features",
+      "preview.sample": "ILLUSTRATIVE EXAMPLE",
+      "preview.cardTitle": "A sample weekly schedule",
+      "preview.week": "WEEK VIEW",
+      "preview.caption": "An illustrative weekly course schedule. Focus or hover over a course to highlight matching sessions.",
+      "weekday.mon": "Mon",
+      "weekday.tue": "Tue",
+      "weekday.wed": "Wed",
+      "weekday.thu": "Thu",
+      "weekday.fri": "Fri",
       "footer.pricing": "Pricing",
       "lang.switch": "Switch to French",
       "theme.toDark": "Switch to dark mode",
@@ -39,11 +74,46 @@
       "nav.product": "Notre produit",
       "nav.pricing": "Tarifs",
       "nav.team": "Notre équipe",
-      "hero.title": "Planificateur de l’Université d’Ottawa",
-      "hero.text": "Créez un horaire de cours qui vous convient.",
-      "hero.quote": "« Votre horaire, votre réussite »",
-      "cta.button": "Essayez-le maintenant!",
-      "preview.title": "Aperçu d’un exemple d’horaire",
+      "hero.kicker": "PLANIFIER SES COURS, PLUS SIMPLEMENT",
+      "hero.title": "Planifiez votre session à Ottawa sans stress",
+      "hero.text": "Comparez des combinaisons de cours valides, évitez les conflits d’horaire et trouvez une semaine qui convient à votre vie à l’Université d’Ottawa.",
+      "hero.link": "Découvrez comment ça fonctionne",
+      "cta.button": "Voir un exemple d’horaire",
+      "intro.kicker": "Planifier plus sereinement",
+      "intro.title": "Des cours choisis à une semaine qui vous convient.",
+      "intro.text": "L’inscription oblige souvent à passer d’une fiche uoZone à l’autre et à assembler manuellement les cours magistraux, les laboratoires et les groupes de discussion. UOPlanner vérifie les combinaisons pour repérer les conflits et présente les options valides afin de vous aider à organiser votre semaine.",
+      "how.label": "Comment UOPlanner peut vous aider",
+      "step.one.title": "Choisissez vos cours",
+      "step.one.text": "Commencez par votre programme, votre année d’études et les cours que vous souhaitez suivre.",
+      "step.two.title": "Comparez des horaires valides",
+      "step.two.text": "Comparez les cours magistraux, les laboratoires et les groupes de discussion sans chevauchement.",
+      "step.three.title": "Passez à uoZone",
+      "step.three.text": "Choisissez un horaire qui vous convient, puis confirmez les places et terminez l’inscription dans uoZone.",
+      "benefits.kicker": "Pensé pour la vie étudiante",
+      "benefits.title": "Bien plus qu’un calendrier",
+      "benefits.text": "Conciliez les cours avec le travail, la famille, les activités sur le campus et le temps nécessaire pour étudier ou souffler.",
+      "benefits.one.title": "Évitez les combinaisons impossibles",
+      "benefits.one.text": "Consultez des horaires sans chevauchement entre cours magistraux, laboratoires et groupes de discussion.",
+      "benefits.two.title": "Faites de la place dans votre semaine",
+      "benefits.two.text": "Utilisez les préférences avancées pour garder une journée libre, réduire les longues pauses ou privilégier les cours du matin.",
+      "benefits.three.title": "Gardez le contrôle",
+      "benefits.three.text": "Comparez vos options ici, puis confirmez les places et inscrivez-vous dans uoZone.",
+      "premium.title": "Envie d’affiner davantage votre horaire?",
+      "premium.text": "Découvrez Premium et ses préférences avancées à 10 $ par mois.",
+      "preview.kicker": "Visualisez votre semaine",
+      "preview.title": "Une vue plus claire de votre semaine de cours.",
+      "preview.text": "En affichant les cours côte à côte, il est plus facile de repérer les périodes libres et de comparer les options.",
+      "preview.hint": "Survolez un cours ou sélectionnez-le au clavier pour mettre en évidence ses autres séances.",
+      "preview.link": "Découvrir les fonctionnalités",
+      "preview.sample": "EXEMPLE ILLUSTRATIF",
+      "preview.cardTitle": "Exemple d’horaire hebdomadaire",
+      "preview.week": "VUE HEBDOMADAIRE",
+      "preview.caption": "Exemple illustratif d’un horaire de cours hebdomadaire. Survolez un cours ou sélectionnez-le pour mettre en évidence les séances correspondantes.",
+      "weekday.mon": "Lun",
+      "weekday.tue": "Mar",
+      "weekday.wed": "Mer",
+      "weekday.thu": "Jeu",
+      "weekday.fri": "Ven",
       "footer.pricing": "Tarifs",
       "lang.switch": "Passer en anglais",
       "theme.toDark": "Passer en mode sombre",
@@ -188,7 +258,11 @@
     musicBtn.addEventListener('click', () => (playing ? stop() : start()));
     document.addEventListener('visibilitychange', () => {
       if (!ctx || !playing) return;
-      document.hidden ? ctx.suspend() : ctx.resume();
+      if (document.hidden) {
+        ctx.suspend();
+      } else {
+        ctx.resume();
+      }
     });
 
     // Browsers block sound until you interact, so if music was on for the
@@ -228,8 +302,26 @@
   /* 2. Headline reveals word by word (the words are split in applyLang) */
   requestAnimationFrame(() => requestAnimationFrame(() => {
     h1?.classList.add('in');
-    document.querySelector('.hero p').classList.add('in');
+    document.querySelector('.hero > p:not(.hero-kicker), .hero-copy > p:not(.hero-kicker)')?.classList.add('in');
   }));
+
+  const revealItems = document.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window) {
+    document.body.classList.add('motion-ready');
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('in');
+        revealObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.16 });
+    revealItems.forEach((item, index) => {
+      item.style.setProperty('--reveal-delay', `${(index % 3) * 90}ms`);
+      revealObserver.observe(item);
+    });
+  } else {
+    revealItems.forEach(item => item.classList.add('in'));
+  }
 
     /* 5. Glass button catches the light under the cursor */
     if (finePointer){
@@ -267,4 +359,3 @@
     slide('100%', '0%', () => { location.href = a.href; });
   });
 })();
-

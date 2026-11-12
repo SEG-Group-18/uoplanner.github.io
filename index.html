@@ -10,7 +10,7 @@
     try { saved = localStorage.getItem('uop-theme'); } catch (e) {}
     d.dataset.theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   </script>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=2">
 </head>
 <body class="home-page">
 
@@ -38,27 +38,100 @@
 
   <main class="home-main">
   <section class="hero-band">
-    <video class="bg-video" autoplay muted loop playsinline preload="metadata" poster="media/pricingpage-bg.jpg" aria-hidden="true" tabindex="-1">
-      <source src="media/pricingpage-bg.mp4" type="video/mp4">
-    </video>
-    <div class="wrap hero">
-      <h1 data-i18n="hero.title" data-split>University of Ottawa Planner</h1>
-      <p data-i18n="hero.text">Build a course schedule that works for you.</p>
+    <div class="wrap hero home-hero">
+      <div class="hero-copy">
+        <p class="hero-kicker" data-i18n="hero.kicker">COURSE PLANNING, MADE CLEARER</p>
+        <h1 data-i18n="hero.title" data-split>Plan your Ottawa semester with less stress</h1>
+        <p data-i18n="hero.text">Compare valid course combinations, avoid timetable conflicts, and find a week that works for your life at uOttawa.</p>
+        <div class="hero-actions">
+          <a class="hero-cta" href="#preview" data-i18n="cta.button">Preview a sample week</a>
+          <a class="hero-link" href="#how-it-works" data-i18n="hero.link">See how it works</a>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="swoop"></div>
+        <div class="ring"></div>
+      </div>
     </div>
   </section>
 
   <div class="home-content">
-    <div class="grid">
-      <div>
-        <blockquote><p data-i18n="hero.quote">&ldquo;Your schedule, your success&rdquo;</p></blockquote>
-        <a class="cta" href="#preview" data-i18n="cta.button">Try it Now!</a>
-      </div>
+    <section class="intro reveal" id="how-it-works" aria-labelledby="intro-title" data-reveal>
+      <p class="section-kicker" data-i18n="intro.kicker">A calmer way to plan</p>
+      <h2 id="intro-title" data-i18n="intro.title">Start with your program. Find a week that fits.</h2>
+      <p class="intro-copy" data-i18n="intro.text">Course planning can mean juggling requirements, sections, and scattered listings. UOPlanner brings the available combinations into one view, so you can compare your options before you commit to a schedule.</p>
+    </section>
 
-      <article class="preview" id="preview">
-        <h2 data-i18n="preview.title">Preview of a sample schedule</h2>
+    <section class="steps-grid" aria-label="How UOPlanner helps" data-i18n-aria="how.label">
+      <article class="step-card reveal" data-reveal>
+        <span class="step-number" aria-hidden="true">01</span>
+        <h3 data-i18n="step.one.title">Set your starting point</h3>
+        <p data-i18n="step.one.text">Choose your program and year of study to see the courses that shape your plan.</p>
+      </article>
+      <article class="step-card reveal" data-reveal>
+        <span class="step-number" aria-hidden="true">02</span>
+        <h3 data-i18n="step.two.title">Compare combinations</h3>
+        <p data-i18n="step.two.text">Review possible course schedules together instead of piecing them together one listing at a time.</p>
+      </article>
+      <article class="step-card reveal" data-reveal>
+        <span class="step-number" aria-hidden="true">03</span>
+        <h3 data-i18n="step.three.title">Choose with confidence</h3>
+        <p data-i18n="step.three.text">Get a clearer picture of your week and pick the combination that suits your routine.</p>
+      </article>
+    </section>
+
+    <section class="benefits-section" aria-labelledby="benefits-title">
+      <div class="benefits-heading">
+        <p class="section-kicker" data-i18n="benefits.kicker">Built around student life</p>
+        <h2 id="benefits-title" data-i18n="benefits.title">More than a calendar</h2>
+        <p data-i18n="benefits.text">Balance classes with work, family, campus activities, and the time you need to study or recharge.</p>
+      </div>
+      <div class="benefits-grid">
+        <article class="benefit-card">
+          <h3 data-i18n="benefits.one.title">Skip impossible combinations</h3>
+          <p data-i18n="benefits.one.text">See schedule options without overlapping lectures, labs, or discussion groups.</p>
+        </article>
+        <article class="benefit-card">
+          <h3 data-i18n="benefits.two.title">Make room for your week</h3>
+          <p data-i18n="benefits.two.text">Use advanced preferences to keep a day free, reduce long gaps, or prioritize morning classes.</p>
+        </article>
+        <article class="benefit-card">
+          <h3 data-i18n="benefits.three.title">Stay in control</h3>
+          <p data-i18n="benefits.three.text">Compare your options here, then confirm course availability and register through uoZone.</p>
+        </article>
+      </div>
+      <a class="premium-teaser" href="Web%20Pages/html%20pages/princingpage.html">
+        <span>
+          <strong data-i18n="premium.title">Want more ways to fine-tune your schedule?</strong>
+          <span data-i18n="premium.text">Explore Premium for advanced planning preferences at $10 per month.</span>
+        </span>
+        <span class="premium-arrow" aria-hidden="true">→</span>
+      </a>
+    </section>
+
+    <section class="schedule-section" id="preview" aria-labelledby="preview-title">
+      <div class="schedule-copy reveal" data-reveal>
+        <p class="section-kicker" data-i18n="preview.kicker">See the week at a glance</p>
+        <h2 id="preview-title" data-i18n="preview.title">A clearer view of your course week.</h2>
+        <p data-i18n="preview.text">When classes are laid out side by side, it is easier to spot open time and compare where each option takes you.</p>
+        <p class="schedule-hint" data-i18n="preview.hint">Hover over or focus a course to highlight its other meeting times.</p>
+        <a class="text-link" href="Web%20Pages/html%20pages/productfeatures.html" data-i18n="preview.link">Explore the features</a>
+      </div>
+      <article class="preview reveal" data-reveal>
+        <div class="preview-heading">
+          <div>
+            <p class="preview-label" data-i18n="preview.sample">ILLUSTRATIVE EXAMPLE</p>
+            <h3 data-i18n="preview.cardTitle">A sample weekly schedule</h3>
+          </div>
+          <span class="week-badge" data-i18n="preview.week">WEEK VIEW</span>
+        </div>
         <table>
+          <caption class="sr-only" data-i18n="preview.caption">An illustrative weekly course schedule. Focus or hover over a course to highlight matching sessions.</caption>
           <thead>
-            <tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr>
+            <tr><th scope="col" data-i18n="weekday.mon">Mon</th><th scope="col" data-i18n="weekday.tue">Tue</th><th scope="col" data-i18n="weekday.wed">Wed</th><th scope="col" data-i18n="weekday.thu">Thu</th><th scope="col" data-i18n="weekday.fri">Fri</th></tr>
           </thead>
           <tbody>
             <tr><td>Course A</td><td></td><td>Course A</td><td></td><td>Lab</td></tr>
@@ -67,7 +140,7 @@
           </tbody>
         </table>
       </article>
-    </div>
+    </section>
   </div>
 </main>
 
@@ -94,7 +167,7 @@
     td.onmouseleave = td.onblur = hide;
   });
 </script>
-<script src="Web%20Pages/js%20pages/homepage.js"></script>
+<script src="Web%20Pages/js%20pages/homepage.js?v=2"></script>
 
 </body>
 </html>

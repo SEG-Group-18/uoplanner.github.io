@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Product Features | UOPlanner</title>
-<link rel="stylesheet" href="../../css/styles.css">
+<link rel="stylesheet" href="../../css/styles.css?v=2">
 <script>
   var d = document.documentElement, saved;
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('js');
   try { saved = localStorage.getItem('uop-theme'); } catch (e) {}
   d.dataset.theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 </script>
-<script src="../js%20pages/productfeatures.js" defer></script>
+<script src="../js%20pages/productfeatures.js?v=2" defer></script>
 </head>
 <body class="product-page">
 
@@ -44,17 +44,26 @@
     </video>
     <div class="wrap hero">
       <h1 data-i18n="hero.title" data-split>Product Features</h1>
-      <p data-i18n="hero.text">Plan your courses with fewer clicks and a clearer view of your options.</p>
+      <p data-i18n="hero.text">Build a conflict-free course schedule around your program and your priorities.</p>
     </div>
   </section>
 
   <ul class="feature-list">
-    <li data-i18n="f1">Enter your program of study and your year of study to get started.</li>
-    <li data-i18n="f2">Generates every possible schedule combination based on your courses.</li>
-    <li data-i18n="f3">No more digging through uoZone for different course combinations by hand.</li>
-    <li data-i18n="f4">Automatic course sequence syncing based off of programme/field of study.</li>
-    <li data-i18n="f5">Affiliated with the University of Ottawa</li>
+    <li data-i18n="f1">Select your program, year of study, and the courses you plan to take.</li>
+    <li data-i18n="f2">Generate schedule combinations and remove conflicts between lectures, labs, and discussion groups.</li>
+    <li data-i18n="f3">Compare weekly schedules visually instead of piecing together uoZone listings by hand.</li>
+    <li data-i18n="f4">Use Premium preferences to keep selected days free, reduce long breaks, or prioritize morning classes.</li>
+    <li data-i18n="f5">Review section codes and instructor details, then copy your codes to take to uoZone.</li>
+    <li data-i18n="f6">UOPlanner helps you plan; verify course availability and complete official registration in uoZone.</li>
   </ul>
+  <section class="feature-callout" aria-labelledby="feature-callout-title">
+    <div>
+      <p class="section-kicker" data-i18n="callout.kicker">Your schedule, your priorities</p>
+      <h2 id="feature-callout-title" data-i18n="callout.title">Make your week fit your life.</h2>
+      <p data-i18n="callout.text">Whether you need a day for work, family, campus activities, studying, or a breather, compare options that fit the routine you want.</p>
+    </div>
+    <a class="hero-cta" href="princingpage.html" data-i18n="callout.link">Compare Free and Premium</a>
+  </section>
 </main>
 
 <footer class="footer">

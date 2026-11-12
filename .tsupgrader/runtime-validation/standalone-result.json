@@ -1,0 +1,248 @@
+{
+  "planHash": "d80dd63443310fd0494aa2747f61d1240b574b224371253bc5728de423796a86",
+  "phase": "standalone",
+  "recordedAtUtc": "2026-11-12T08:43:51.0458507Z",
+  "retryCount": 0,
+  "resetBaseline": false,
+  "complete": true,
+  "result": {
+    "setupSucceeded": true,
+    "setupDurationMs": 122419,
+    "setupFailureOutput": null,
+    "assertions": [
+      {
+        "name": "typescript-typecheck",
+        "kind": "process",
+        "verificationMethod": "exit-code",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "\r\n\u003E uoplanner@1.0.0 typecheck\r\n\u003E tsc --noEmit\r\n\r\n",
+        "durationMs": 2900
+      },
+      {
+        "name": "eslint-check",
+        "kind": "process",
+        "verificationMethod": "exit-code",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "\r\n\u003E uoplanner@1.0.0 lint\r\n\u003E eslint .\r\n\r\n",
+        "durationMs": 5917
+      },
+      {
+        "name": "static-production-build",
+        "kind": "process",
+        "verificationMethod": "exit-code",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "\r\n\u003E uoplanner@1.0.0 build\r\n\u003E next build\r\n\r\n\u25B2 Next.js 16.4.6 (Turbopack)\r\n\u2713 Running next.config.ts took 76ms\r\n\r\n  Creating an optimized production build ...\r\n\u2713 Compiled successfully in 1282ms\r\n  Running TypeScript ...\r\n  Finished TypeScript in 2.4s ...\r\n  Collecting page data using 7 workers ...\r\n  Generating static pages using 7 workers (0/6) ...\r\n  Generating static pages using 7 workers (1/6) \r\n  Generating static pages using 7 workers (2/6) \r\n  Generating static pages using 7 workers (4/6) \r\n\u2713 Generating static pages using 7 workers (6/6) in 1180ms\r\n  Finalizing page optimization ...\r\n\r\nRoute (app)\r\n\u250C \u25CB /\r\n\u251C \u25CB /_not-found\r\n\u251C \u25CB /pricing\r\n\u251C \u25CB /product\r\n\u2514 \u25CB /team\r\n\r\n\r\n\u25CB  (Static)  prerendered as static content\r\n\r\n",
+        "durationMs": 9150
+      },
+      {
+        "name": "tests-pass",
+        "kind": "process",
+        "verificationMethod": "test-results",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "\r\n\u003E uoplanner@1.0.0 test\r\n\u003E vitest run\r\n\r\n\r\n RUN  v5.1.0 C:/Users/desou/Downloads/baseband-telemetry-pipeline/baseband-telemetry-pipeline/uoplanner.github.io\r\n\r\n\r\n Test Files  1 passed (1)\r\n      Tests  5 passed (5)\r\n   Start at  03:43:25\r\n   Duration  884ms (import 49%, transform 42%, worker 4%, tests 4%)\r\n\r\n",
+        "durationMs": 7860,
+        "testResults": {
+          "testFramework": "vitest",
+          "runnerDetectedFrom": "package_json",
+          "testsTotal": 5,
+          "testsPassed": 5,
+          "testsFailed": 0,
+          "testsSkipped": 0,
+          "parseFailed": false
+        }
+      },
+      {
+        "name": "home-route-200",
+        "kind": "http-probe",
+        "verificationMethod": "http-status",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": null,
+        "outputSample": "HTTP 200\n\u003C!DOCTYPE html\u003E\u003Chtml lang=\u0022en\u0022\u003E\u003Chead\u003E\u003Cmeta charSet=\u0022utf-8\u0022/\u003E\u003Cmeta name=\u0022viewport\u0022 content=\u0022width=device-width, initial-scale=1\u0022/\u003E\u003Clink rel=\u0022stylesheet\u0022 href=\u0022/_next/static/chunks/src_app_globals_162hn9oqc8uss.css\u0022 data-precedence=\u0022next_static/chunks/src_app_globals_162hn9oqc8uss.css\u0022/\u003E\u003Clink rel=\u0022preload\u0022 as=\u0022script\u0022 fetchPriority=\u0022low\u0022 href=\u0022/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_0fb9-gqu7_t97._.js\u0022/\u003E\u003Cscript src=\u0022/_next/static/chunks/1daa_next_dist_compiled_react-dom_cjs_react-dom-client_development_0mp0cp_t-ezj9.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/1q96_modules_next_dist_compiled_react-dom_cjs_react-dom_development_1sqry0_53krp4.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_compiled_react-dom_0grqycjrj6mju._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_164kp-67asdr9._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_compiled_next-devtools_index_090k2jmam7qwg.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_compiled_1amofcmz--cdp._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_client_1165-soo5tfpf._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_05y3oi5z9mc_3._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_%40swc_helpers_cjs_1r9vbqwj2323d._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/_1anvha4rlo79g._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/turbopack-_11q0wbt2n0d9y._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/_219uq1sj0q91c._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/_0scg0d_gwp9ch._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/src_1y1d4x_s264sb._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Ctitle\u003EUOPlanner \u2014 Plan your Ottawa semester\u003C/title\u003E\u003Cmeta name=\u0022description\u0022 content=\u0022Compare uOttawa course schedules, avoid timetable conflicts, and find a week that fits.\u0022/\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_build_polyfills_polyfill-nomodule.js\u0022 noModule=\u0022\u0022\u003E\u003C/script\u003E\u003C/head\u003E\u003Cbody class=\u0022flex min-h-screen flex-col\u0022\u003E\u003Cdiv hidden=\u0022\u0022\u003E\u003C!--$--\u003E\u003C!--/$--\u003E\u003C/div\u003E\u003Cheader class=\u0022site-header\u0022\u003E\u003Cdiv class=\u0022header-inner\u0022\u003E\u003Ca class=\u0022brand\u0022 aria-label=\u0022UOPlanner\u0022 href=\u0022/\u0022\u003E\u003Cspan class=\u0022brand-mark\u0022 aria-hidden=\u0022true\u0022\u003EUO\u003C/span\u003E\u003Cspan\u003EUOPlanner\u003C/span\u003E\u003C/a\u003E\u003Cdiv class=\u0022header-actions\u0022\u003E\u003Cnav class=\u0022main-nav\u0022 aria-label=\u0022Main\u0022\u003E\u003Ca href=\u0022/\u0022\u003EHome\u003C/a\u003E\u003Ca href=\u0022/product/\u0022\u003EProduct\u003C/a\u003E\u003Ca href=\u0022/pricing/\u0022\u003EPricing\u003C/a\u003E\u003Ca href=\u0022/team/\u0022\u003ETeam\u003C/a\u003E\u003C/nav\u003E\u003Cdiv class=\u0022header-tools\u0022\u003E\u003Cbutton class=\u0022icon-button language-button\u0022 type=\u0022button\u0022 aria-label=\u0022Switch language to French\u0022\u003EFR\u003C/button\u003E\u003Cbutton class=\u0022icon-button\u0022 type=\u0022button\u0022 aria-label=\u0022Switch to dark mode\u0022\u003E\u003Cspan aria-hidden=\u0022true\u0022\u003E\u263E\u003C/span\u003E\u003C/button\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003C/header\u003E\u003Cmain\u003E\u003Csection class=\u0022hero\u0022\u003E\u003Cvideo class=\u0022hero-video\u0022 autoPlay=\u0022\u0022 muted=\u0022\u0022 loop=\u0022\u0022 playsInline=\u0022\u0022 preload=\u0022metadata\u0022 poster=\u0022/media/hero-motion.jpg\u0022 aria-hidden=\u0022true\u0022 tabindex=\u0022-1\u0022\u003E\u003Csource src=\u0022/media/hero-motion.mp4\u0022 type=\u0022video/mp4\u0022/\u003E\u003C/video\u003E\u003Cdiv class=\u0022hero-video-shade\u0022 aria-hidden=\u0022true\u0022\u003E\u003C/div\u003E\u003Cdiv class=\u0022hero-content\u0022\u003E\u003Cdiv class=\u0022hero-copy\u0022\u003E\u003Cp class=\u0022eyebrow\u0022\u003ECOURSE PLANNING, MADE CLEARER\u003C/p\u003E\u003Ch1\u003EPlan your Ottawa semester with less stress\u003C/h1\u003E\u003Cp class=\u0022hero-description\u0022\u003ECompare valid course combinations, avoid timetable conflicts, and find a week that works for your life at uOttawa.\u003C/p\u003E\u003Cdiv class=\u0022hero-actions\u0022\u003E\u003Ca class=\u0022button-primary\u0022 href=\u0022#schedule\u0022\u003ESee your sample week\u003C/a\u003E\u003Ca class=\u0022button-secondary\u0022 href=\u0022#how-it-works\u0022\u003EHow it works\u003C!-- --\u003E \u003Cspan aria-hidden=\u0022true\u0022\u003E\u2193\u003C/span\u003E\u003C/a\u003E\u003C/div\u003E\u003C/div\u003E\u003Cdiv class=\u0022hero-art-space\u0022 aria-hidden=\u0022true\u0022\u003E\u003C/div\u003E\u003C/div\u003E\u003C/section\u003E\u003Cdiv class=\u0022page-content\u0022\u003E\u003Csection id=\u0022how-it-works\u0022 aria-labelledby=\u0022intro-title\u0022\u003E\u003Cdiv class=\u0022section-heading\u0022\u003E\u003Cp class=\u0022eyebrow\u0022\u003EA calmer way to plan\u003C/p\u003E\u003Ch2 id=\u0022intro-title\u0022\u003EFrom course list to a week that works.\u003C/h2\u003E\u003Cp\u003ERegistration can mean jumping between uoZone listings and trying to fit lectures, labs, and discussion \n\u2026[truncated]",
+        "durationMs": 6674
+      },
+      {
+        "name": "product-route-200",
+        "kind": "http-probe",
+        "verificationMethod": "http-status",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": null,
+        "outputSample": "HTTP 200\n\u003C!DOCTYPE html\u003E\u003Chtml lang=\u0022en\u0022\u003E\u003Chead\u003E\u003Cmeta charSet=\u0022utf-8\u0022/\u003E\u003Cmeta name=\u0022viewport\u0022 content=\u0022width=device-width, initial-scale=1\u0022/\u003E\u003Clink rel=\u0022stylesheet\u0022 href=\u0022/_next/static/chunks/src_app_globals_162hn9oqc8uss.css\u0022 data-precedence=\u0022next_static/chunks/src_app_globals_162hn9oqc8uss.css\u0022/\u003E\u003Clink rel=\u0022preload\u0022 as=\u0022script\u0022 fetchPriority=\u0022low\u0022 href=\u0022/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_0fb9-gqu7_t97._.js\u0022/\u003E\u003Cscript src=\u0022/_next/static/chunks/1daa_next_dist_compiled_react-dom_cjs_react-dom-client_development_0mp0cp_t-ezj9.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/1q96_modules_next_dist_compiled_react-dom_cjs_react-dom_development_1sqry0_53krp4.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_compiled_react-dom_0grqycjrj6mju._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_164kp-67asdr9._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_compiled_next-devtools_index_090k2jmam7qwg.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_compiled_1amofcmz--cdp._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_client_1165-soo5tfpf._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_05y3oi5z9mc_3._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_%40swc_helpers_cjs_1r9vbqwj2323d._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/_1anvha4rlo79g._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/turbopack-_11q0wbt2n0d9y._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/_1hkwhdpfto39p._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/_0scg0d_gwp9ch._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/src_app_product_page_tsx_1vc-djhh_kasq._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Ctitle\u003EUOPlanner \u2014 Plan your Ottawa semester\u003C/title\u003E\u003Cmeta name=\u0022description\u0022 content=\u0022Compare uOttawa course schedules, avoid timetable conflicts, and find a week that fits.\u0022/\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_build_polyfills_polyfill-nomodule.js\u0022 noModule=\u0022\u0022\u003E\u003C/script\u003E\u003C/head\u003E\u003Cbody class=\u0022flex min-h-screen flex-col\u0022\u003E\u003Cdiv hidden=\u0022\u0022\u003E\u003C!--$--\u003E\u003C!--/$--\u003E\u003C/div\u003E\u003Cheader class=\u0022site-header\u0022\u003E\u003Cdiv class=\u0022header-inner\u0022\u003E\u003Ca class=\u0022brand\u0022 aria-label=\u0022UOPlanner\u0022 href=\u0022/\u0022\u003E\u003Cspan class=\u0022brand-mark\u0022 aria-hidden=\u0022true\u0022\u003EUO\u003C/span\u003E\u003Cspan\u003EUOPlanner\u003C/span\u003E\u003C/a\u003E\u003Cdiv class=\u0022header-actions\u0022\u003E\u003Cnav class=\u0022main-nav\u0022 aria-label=\u0022Main\u0022\u003E\u003Ca href=\u0022/\u0022\u003EHome\u003C/a\u003E\u003Ca href=\u0022/product/\u0022\u003EProduct\u003C/a\u003E\u003Ca href=\u0022/pricing/\u0022\u003EPricing\u003C/a\u003E\u003Ca href=\u0022/team/\u0022\u003ETeam\u003C/a\u003E\u003C/nav\u003E\u003Cdiv class=\u0022header-tools\u0022\u003E\u003Cbutton class=\u0022icon-button language-button\u0022 type=\u0022button\u0022 aria-label=\u0022Switch language to French\u0022\u003EFR\u003C/button\u003E\u003Cbutton class=\u0022icon-button\u0022 type=\u0022button\u0022 aria-label=\u0022Switch to dark mode\u0022\u003E\u003Cspan aria-hidden=\u0022true\u0022\u003E\u263E\u003C/span\u003E\u003C/button\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003C/header\u003E\u003Cmain\u003E\u003Csection class=\u0022content-hero\u0022\u003E\u003Cdiv class=\u0022content-hero-inner\u0022\u003E\u003Cp class=\u0022eyebrow\u0022\u003EYour planning toolkit\u003C/p\u003E\u003Ch1\u003EBuild a week that fits your life.\u003C/h1\u003E\u003Cp\u003EUOPlanner brings the pieces of course planning together so you can compare a clear set of schedule options before registering.\u003C/p\u003E\u003C/div\u003E\u003C/section\u003E\u003Csection class=\u0022content-section\u0022\u003E\u003Col class=\u0022feature-list\u0022\u003E\u003Cli\u003EChoose courses for your program and year of study.\u003C/li\u003E\u003Cli\u003ECompare combinations of lectures, labs, and discussion groups while avoiding timetable conflicts.\u003C/li\u003E\u003Cli\u003EReview the week visually to spot long gaps and days that stay open.\u003C/li\u003E\u003Cli\u003EUse preferences to explore free days, more compact schedules, or morning-focused options.\u003C/li\u003E\u003Cli\u003EReview section details and take your selected codes to uoZone.\u003C/li\u003E\u003C/ol\u003E\u003Cp class=\u0022notice-card\u0022\u003EUOPlanner is a planning aid, not the university registration system. Course availability can change; confirm details and register through uoZone.\u003C/p\u003E\u003C/section\u003E\u003C/main\u003E\u003C!--$--\u003E\u003C!--/$--\u003E\u003Cfooter class=\u0022site-footer\u0022\u003E\u003Cdiv class=\u0022footer-inner\u0022\u003E\u003Ca class=\u0022footer-brand\u0022 href=\u0022/\u0022\u003EUOPlanner\u003C/a\u003E\u003Cp\u003EA clearer week starts with a better plan.\u003C/p\u003E\u003Cnav aria-label=\u0022Team\u0022\u003E\u003Ca href=\u0022/\u0022\u003EHome\u003C/a\u003E\u003Ca href=\u0022/\n\u2026[truncated]",
+        "durationMs": 5578
+      },
+      {
+        "name": "pricing-route-200",
+        "kind": "http-probe",
+        "verificationMethod": "http-status",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": null,
+        "outputSample": "HTTP 200\n\u003C!DOCTYPE html\u003E\u003Chtml lang=\u0022en\u0022\u003E\u003Chead\u003E\u003Cmeta charSet=\u0022utf-8\u0022/\u003E\u003Cmeta name=\u0022viewport\u0022 content=\u0022width=device-width, initial-scale=1\u0022/\u003E\u003Clink rel=\u0022stylesheet\u0022 href=\u0022/_next/static/chunks/src_app_globals_162hn9oqc8uss.css\u0022 data-precedence=\u0022next_static/chunks/src_app_globals_162hn9oqc8uss.css\u0022/\u003E\u003Clink rel=\u0022preload\u0022 as=\u0022script\u0022 fetchPriority=\u0022low\u0022 href=\u0022/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_0fb9-gqu7_t97._.js\u0022/\u003E\u003Cscript src=\u0022/_next/static/chunks/1daa_next_dist_compiled_react-dom_cjs_react-dom-client_development_0mp0cp_t-ezj9.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/1q96_modules_next_dist_compiled_react-dom_cjs_react-dom_development_1sqry0_53krp4.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_compiled_react-dom_0grqycjrj6mju._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_164kp-67asdr9._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_compiled_next-devtools_index_090k2jmam7qwg.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_compiled_1amofcmz--cdp._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_client_1165-soo5tfpf._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_05y3oi5z9mc_3._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_%40swc_helpers_cjs_1r9vbqwj2323d._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/_1anvha4rlo79g._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/turbopack-_11q0wbt2n0d9y._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/_11e7fgi0dpf9p._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/_0scg0d_gwp9ch._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/src_app_pricing_page_tsx_0tlvrttim6lba._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Ctitle\u003EUOPlanner \u2014 Plan your Ottawa semester\u003C/title\u003E\u003Cmeta name=\u0022description\u0022 content=\u0022Compare uOttawa course schedules, avoid timetable conflicts, and find a week that fits.\u0022/\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_build_polyfills_polyfill-nomodule.js\u0022 noModule=\u0022\u0022\u003E\u003C/script\u003E\u003C/head\u003E\u003Cbody class=\u0022flex min-h-screen flex-col\u0022\u003E\u003Cdiv hidden=\u0022\u0022\u003E\u003C!--$--\u003E\u003C!--/$--\u003E\u003C/div\u003E\u003Cheader class=\u0022site-header\u0022\u003E\u003Cdiv class=\u0022header-inner\u0022\u003E\u003Ca class=\u0022brand\u0022 aria-label=\u0022UOPlanner\u0022 href=\u0022/\u0022\u003E\u003Cspan class=\u0022brand-mark\u0022 aria-hidden=\u0022true\u0022\u003EUO\u003C/span\u003E\u003Cspan\u003EUOPlanner\u003C/span\u003E\u003C/a\u003E\u003Cdiv class=\u0022header-actions\u0022\u003E\u003Cnav class=\u0022main-nav\u0022 aria-label=\u0022Main\u0022\u003E\u003Ca href=\u0022/\u0022\u003EHome\u003C/a\u003E\u003Ca href=\u0022/product/\u0022\u003EProduct\u003C/a\u003E\u003Ca href=\u0022/pricing/\u0022\u003EPricing\u003C/a\u003E\u003Ca href=\u0022/team/\u0022\u003ETeam\u003C/a\u003E\u003C/nav\u003E\u003Cdiv class=\u0022header-tools\u0022\u003E\u003Cbutton class=\u0022icon-button language-button\u0022 type=\u0022button\u0022 aria-label=\u0022Switch language to French\u0022\u003EFR\u003C/button\u003E\u003Cbutton class=\u0022icon-button\u0022 type=\u0022button\u0022 aria-label=\u0022Switch to dark mode\u0022\u003E\u003Cspan aria-hidden=\u0022true\u0022\u003E\u263E\u003C/span\u003E\u003C/button\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003C/header\u003E\u003Cmain\u003E\u003Csection class=\u0022content-hero\u0022\u003E\u003Cdiv class=\u0022content-hero-inner\u0022\u003E\u003Cp class=\u0022eyebrow\u0022\u003ESimple, student-friendly pricing\u003C/p\u003E\u003Ch1\u003EFree essentials. Premium options.\u003C/h1\u003E\u003Cp\u003EStart with the core schedule planner at no cost. The planned Premium tier adds more ways to prioritize the week you want.\u003C/p\u003E\u003C/div\u003E\u003C/section\u003E\u003Csection class=\u0022content-section\u0022\u003E\u003Cdiv class=\u0022pricing-cards\u0022\u003E\u003Carticle class=\u0022plan-card\u0022\u003E\u003Cp class=\u0022plan-label\u0022\u003EFree\u003C/p\u003E\u003Ch2\u003EFree\u003C/h2\u003E\u003Cp class=\u0022plan-price\u0022\u003E$0 \u003Cspan\u003E/ month\u003C/span\u003E\u003C/p\u003E\u003Cp class=\u0022plan-description\u0022\u003EThe essentials for building and comparing course schedules.\u003C/p\u003E\u003Cul class=\u0022plan-features\u0022\u003E\u003Cli\u003EGenerate and compare course combinations\u003C/li\u003E\u003Cli\u003EAvoid conflicts between class meetings\u003C/li\u003E\u003Cli\u003EView a clear weekly timetable\u003C/li\u003E\u003C/ul\u003E\u003Ca class=\u0022plan-button\u0022 href=\u0022/#schedule\u0022\u003EStart planning\u003C/a\u003E\u003C/article\u003E\u003Carticle class=\u0022plan-card plan-card-premium\u0022\u003E\u003Cp class=\u0022plan-label\u0022\u003EPlanned\u003C/p\u003E\u003Ch2\u003EPremium\u003C/h2\u003E\u003Cp class=\u0022plan-price\u0022\u003E$10 \u003Cspan\u003E/ month\u003C/span\u003E\u003C/p\u003E\u003Cp class=\u0022plan-description\u0022\u003EAdvanced preferences to help your schedule fit the rest of your life.\u003C/p\u003E\u003Cul class=\u0022plan-features\u0022\u003E\u003Cli\u003EBlock days you want to keep free\u003C/li\u003E\u003Cli\u003EPrioritize compact schedules with shorter gaps\u003C/li\u003E\u003Cli\n\u2026[truncated]",
+        "durationMs": 5655
+      },
+      {
+        "name": "team-route-200",
+        "kind": "http-probe",
+        "verificationMethod": "http-status",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": null,
+        "outputSample": "HTTP 200\n\u003C!DOCTYPE html\u003E\u003Chtml lang=\u0022en\u0022\u003E\u003Chead\u003E\u003Cmeta charSet=\u0022utf-8\u0022/\u003E\u003Cmeta name=\u0022viewport\u0022 content=\u0022width=device-width, initial-scale=1\u0022/\u003E\u003Clink rel=\u0022stylesheet\u0022 href=\u0022/_next/static/chunks/src_app_globals_162hn9oqc8uss.css\u0022 data-precedence=\u0022next_static/chunks/src_app_globals_162hn9oqc8uss.css\u0022/\u003E\u003Clink rel=\u0022preload\u0022 as=\u0022script\u0022 fetchPriority=\u0022low\u0022 href=\u0022/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_0fb9-gqu7_t97._.js\u0022/\u003E\u003Cscript src=\u0022/_next/static/chunks/1daa_next_dist_compiled_react-dom_cjs_react-dom-client_development_0mp0cp_t-ezj9.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/1q96_modules_next_dist_compiled_react-dom_cjs_react-dom_development_1sqry0_53krp4.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_compiled_react-dom_0grqycjrj6mju._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_164kp-67asdr9._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_compiled_next-devtools_index_090k2jmam7qwg.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_compiled_1amofcmz--cdp._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_client_1165-soo5tfpf._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_05y3oi5z9mc_3._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_%40swc_helpers_cjs_1r9vbqwj2323d._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/_1anvha4rlo79g._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/turbopack-_11q0wbt2n0d9y._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/_1ie0p-s9116vl._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/_0scg0d_gwp9ch._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_1aa47hljo-d43._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022/_next/static/chunks/src_app_team_page_tsx_1trafgdr-yk4q._.js\u0022 async=\u0022\u0022\u003E\u003C/script\u003E\u003Ctitle\u003EUOPlanner \u2014 Plan your Ottawa semester\u003C/title\u003E\u003Cmeta name=\u0022description\u0022 content=\u0022Compare uOttawa course schedules, avoid timetable conflicts, and find a week that fits.\u0022/\u003E\u003Cscript src=\u0022/_next/static/chunks/node_modules_next_dist_build_polyfills_polyfill-nomodule.js\u0022 noModule=\u0022\u0022\u003E\u003C/script\u003E\u003C/head\u003E\u003Cbody class=\u0022flex min-h-screen flex-col\u0022\u003E\u003Cdiv hidden=\u0022\u0022\u003E\u003C!--$--\u003E\u003C!--/$--\u003E\u003C/div\u003E\u003Cheader class=\u0022site-header\u0022\u003E\u003Cdiv class=\u0022header-inner\u0022\u003E\u003Ca class=\u0022brand\u0022 aria-label=\u0022UOPlanner\u0022 href=\u0022/\u0022\u003E\u003Cspan class=\u0022brand-mark\u0022 aria-hidden=\u0022true\u0022\u003EUO\u003C/span\u003E\u003Cspan\u003EUOPlanner\u003C/span\u003E\u003C/a\u003E\u003Cdiv class=\u0022header-actions\u0022\u003E\u003Cnav class=\u0022main-nav\u0022 aria-label=\u0022Main\u0022\u003E\u003Ca href=\u0022/\u0022\u003EHome\u003C/a\u003E\u003Ca href=\u0022/product/\u0022\u003EProduct\u003C/a\u003E\u003Ca href=\u0022/pricing/\u0022\u003EPricing\u003C/a\u003E\u003Ca href=\u0022/team/\u0022\u003ETeam\u003C/a\u003E\u003C/nav\u003E\u003Cdiv class=\u0022header-tools\u0022\u003E\u003Cbutton class=\u0022icon-button language-button\u0022 type=\u0022button\u0022 aria-label=\u0022Switch language to French\u0022\u003EFR\u003C/button\u003E\u003Cbutton class=\u0022icon-button\u0022 type=\u0022button\u0022 aria-label=\u0022Switch to dark mode\u0022\u003E\u003Cspan aria-hidden=\u0022true\u0022\u003E\u263E\u003C/span\u003E\u003C/button\u003E\u003C/div\u003E\u003C/div\u003E\u003C/div\u003E\u003C/header\u003E\u003Cmain\u003E\u003Csection class=\u0022content-hero\u0022\u003E\u003Cdiv class=\u0022content-hero-inner\u0022\u003E\u003Cp class=\u0022eyebrow\u0022\u003EOur mission\u003C/p\u003E\u003Ch1\u003EBuilt by students, for students.\u003C/h1\u003E\u003Cp\u003EWe are software engineering and computer science students at the University of Ottawa, bringing our own course-planning frustrations into a shared project.\u003C/p\u003E\u003C/div\u003E\u003C/section\u003E\u003Csection class=\u0022content-section\u0022\u003E\u003Cdiv class=\u0022team-grid\u0022\u003E\u003Carticle class=\u0022team-card\u0022\u003E\u003Cimg alt=\u0022\u0022 loading=\u0022lazy\u0022 width=\u002276\u0022 height=\u002276\u0022 decoding=\u0022async\u0022 data-nimg=\u00221\u0022 class=\u0022team-avatar\u0022 style=\u0022color:transparent\u0022 src=\u0022/media/samuel-brownlee.png\u0022/\u003E\u003Ch2\u003ESamuel Brownlee\u003C/h2\u003E\u003Ch3\u003EFinding the right sections\u003C/h3\u003E\u003Cp\u003EWhile testing the planning flow, our team saw how much time it takes to gather lecture, lab, and discussion details from separate listings.\u003C/p\u003E\u003C/article\u003E\u003Carticle class=\u0022team-card\u0022\u003E\u003Cimg alt=\u0022\u0022 loading=\u0022lazy\u0022 width=\u002276\u0022 height=\u002276\u0022 decoding=\u0022async\u0022 data-nimg=\u00221\u0022 class=\u0022team-avatar\u0022 style=\u0022color:transparent\u0022 src=\u0022/media/queren-de-souza.png\u0022/\u003E\u003Ch2\u003EQu\u00E9r\u00E8n De Souza\u003C/h2\u003E\u003Ch3\u003ECatching timetable conflicts\u003C/h3\u003E\u003Cp\u003ETrying combinations by hand made it easy to miss an overlap\n\u2026[truncated]",
+        "durationMs": 5689
+      }
+    ],
+    "executions": [
+      {
+        "source": "setup[0]",
+        "resolvedExecutable": "C:\\Program Files\\npm.CMD",
+        "args": [
+          "ci"
+        ],
+        "cwd": "C:\\Users\\desou\\Downloads\\baseband-telemetry-pipeline\\baseband-telemetry-pipeline\\uoplanner.github.io",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "typescript-typecheck",
+        "resolvedExecutable": "C:\\Program Files\\npm.CMD",
+        "args": [
+          "run",
+          "typecheck"
+        ],
+        "cwd": "C:\\Users\\desou\\Downloads\\baseband-telemetry-pipeline\\baseband-telemetry-pipeline\\uoplanner.github.io",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "eslint-check",
+        "resolvedExecutable": "C:\\Program Files\\npm.CMD",
+        "args": [
+          "run",
+          "lint"
+        ],
+        "cwd": "C:\\Users\\desou\\Downloads\\baseband-telemetry-pipeline\\baseband-telemetry-pipeline\\uoplanner.github.io",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "static-production-build",
+        "resolvedExecutable": "C:\\Program Files\\npm.CMD",
+        "args": [
+          "run",
+          "build"
+        ],
+        "cwd": "C:\\Users\\desou\\Downloads\\baseband-telemetry-pipeline\\baseband-telemetry-pipeline\\uoplanner.github.io",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "tests-pass",
+        "resolvedExecutable": "C:\\Program Files\\npm.CMD",
+        "args": [
+          "test"
+        ],
+        "cwd": "C:\\Users\\desou\\Downloads\\baseband-telemetry-pipeline\\baseband-telemetry-pipeline\\uoplanner.github.io",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "home-route-200",
+        "resolvedExecutable": "C:\\Program Files\\npm.CMD",
+        "args": [
+          "run",
+          "dev",
+          "--",
+          "--hostname",
+          "127.0.0.1",
+          "--port",
+          "3333"
+        ],
+        "cwd": "C:\\Users\\desou\\Downloads\\baseband-telemetry-pipeline\\baseband-telemetry-pipeline\\uoplanner.github.io",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "product-route-200",
+        "resolvedExecutable": "C:\\Program Files\\npm.CMD",
+        "args": [
+          "run",
+          "dev",
+          "--",
+          "--hostname",
+          "127.0.0.1",
+          "--port",
+          "3333"
+        ],
+        "cwd": "C:\\Users\\desou\\Downloads\\baseband-telemetry-pipeline\\baseband-telemetry-pipeline\\uoplanner.github.io",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "pricing-route-200",
+        "resolvedExecutable": "C:\\Program Files\\npm.CMD",
+        "args": [
+          "run",
+          "dev",
+          "--",
+          "--hostname",
+          "127.0.0.1",
+          "--port",
+          "3333"
+        ],
+        "cwd": "C:\\Users\\desou\\Downloads\\baseband-telemetry-pipeline\\baseband-telemetry-pipeline\\uoplanner.github.io",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "team-route-200",
+        "resolvedExecutable": "C:\\Program Files\\npm.CMD",
+        "args": [
+          "run",
+          "dev",
+          "--",
+          "--hostname",
+          "127.0.0.1",
+          "--port",
+          "3333"
+        ],
+        "cwd": "C:\\Users\\desou\\Downloads\\baseband-telemetry-pipeline\\baseband-telemetry-pipeline\\uoplanner.github.io",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      }
+    ]
+  }
+}
