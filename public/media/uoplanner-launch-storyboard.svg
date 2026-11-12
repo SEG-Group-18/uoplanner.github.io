@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1440 760" style="height:auto;max-width:1440px;display:block;margin:auto" role="img" aria-labelledby="title description">
+  <title id="title">UOPlanner launch film storyboard preview</title>
+  <desc id="description">Six storyboard frames for a calm, 30-second UOPlanner launch film in a Swiss editorial motion-graphics style.</desc>
+  <defs>
+    <style>
+      .sans { font-family: "Segoe UI", Arial, sans-serif; }
+      .serif { font-family: Georgia, serif; }
+      .label { font: 700 11px "Segoe UI", Arial, sans-serif; letter-spacing: 1.8px; }
+      .caption { font: 600 12px "Segoe UI", Arial, sans-serif; }
+      .micro { font: 500 9px "Segoe UI", Arial, sans-serif; letter-spacing: .5px; }
+      .title { font: 700 25px Georgia, serif; }
+      .rule { stroke: #80746C; stroke-opacity: .38; }
+    </style>
+  </defs>
+
+  <rect width="1440" height="760" fill="#ffffff"/>
+  <text x="44" y="38" fill="#8F001A" class="label">UOPLANNER / LAUNCH FILM</text>
+  <text x="1396" y="38" fill="#80746C" class="micro" text-anchor="end">STORYBOARD PREVIEW · 16:9 · 30 SECONDS</text>
+  <line x1="44" y1="56" x2="1396" y2="56" class="rule"/>
+
+  <!-- Shot 1 -->
+  <g transform="translate(44 82)">
+    <rect width="432" height="243" fill="#8F001A"/>
+    <rect x="1" y="1" width="430" height="241" fill="none" stroke="#80746C" stroke-opacity=".35"/>
+    <image href="uoplannerlogo.png" x="170" y="22" width="92" height="92" preserveAspectRatio="xMidYMid meet"/>
+    <line x1="34" y1="137" x2="398" y2="137" stroke="#ffffff" stroke-opacity=".45"/>
+    <text x="34" y="174" fill="#ffffff" class="title">University of Ottawa</text>
+    <text x="34" y="203" fill="#ffffff" class="title">Planner</text>
+    <rect x="34" y="219" width="34" height="3" fill="#ffffff"/>
+  </g>
+  <text x="44" y="347" fill="#8F001A" class="label">01 / 0–4 SEC</text>
+  <text x="44" y="367" fill="#80746C" class="caption">Logo, then title</text>
+
+  <!-- Shot 2 -->
+  <g transform="translate(504 82)">
+    <rect width="432" height="243" fill="#ffffff"/>
+    <rect x="1" y="1" width="430" height="241" fill="none" stroke="#80746C" stroke-opacity=".38"/>
+    <text x="28" y="33" fill="#8F001A" class="label">UOZONE / COURSE SEARCH</text>
+    <line x1="28" y1="46" x2="404" y2="46" class="rule"/>
+    <g fill="#80746C" fill-opacity=".09" stroke="#80746C" stroke-opacity=".28">
+      <rect x="28" y="62" width="248" height="31"/>
+      <rect x="28" y="101" width="281" height="31"/>
+      <rect x="28" y="140" width="224" height="31"/>
+      <rect x="28" y="179" width="266" height="31"/>
+    </g>
+    <g stroke="#80746C" stroke-opacity=".52" stroke-width="2">
+      <line x1="43" y1="77" x2="153" y2="77"/>
+      <line x1="43" y1="116" x2="186" y2="116"/>
+      <line x1="43" y1="155" x2="139" y2="155"/>
+      <line x1="43" y1="194" x2="170" y2="194"/>
+    </g>
+    <path d="M337 91l27 46-17-6-9 16-8-4 9-16-16-5z" fill="#8F001A"/>
+    <text x="337" y="188" fill="#80746C" class="micro" text-anchor="middle">ONE BY ONE</text>
+  </g>
+  <text x="504" y="347" fill="#8F001A" class="label">02 / 4–9 SEC</text>
+  <text x="504" y="367" fill="#80746C" class="caption">Searching uoZone by hand, course by course</text>
+
+  <!-- Shot 3 -->
+  <g transform="translate(964 82)">
+    <rect width="432" height="243" fill="#80746C" fill-opacity=".08"/>
+    <rect x="1" y="1" width="430" height="241" fill="none" stroke="#80746C" stroke-opacity=".38"/>
+    <text x="28" y="34" fill="#8F001A" class="label">START WITH YOUR STUDIES</text>
+    <line x1="28" y1="47" x2="404" y2="47" class="rule"/>
+    <text x="42" y="83" fill="#80746C" class="micro">PROGRAM OF STUDY</text>
+    <rect x="40" y="94" width="352" height="42" fill="#ffffff" stroke="#80746C" stroke-opacity=".5"/>
+    <line x1="56" y1="115" x2="241" y2="115" stroke="#80746C" stroke-opacity=".3" stroke-width="2"/>
+    <text x="42" y="166" fill="#80746C" class="micro">YEAR OF STUDY</text>
+    <rect x="40" y="177" width="352" height="42" fill="#ffffff" stroke="#80746C" stroke-opacity=".5"/>
+    <line x1="56" y1="198" x2="154" y2="198" stroke="#80746C" stroke-opacity=".3" stroke-width="2"/>
+    <rect x="366" y="107" width="8" height="16" fill="#8F001A"/>
+    <rect x="366" y="190" width="8" height="16" fill="#8F001A"/>
+  </g>
+  <text x="964" y="347" fill="#8F001A" class="label">03 / 9–15 SEC</text>
+  <text x="964" y="367" fill="#80746C" class="caption">Enter your program of study and your year of study.</text>
+
+  <!-- Shot 4 -->
+  <g transform="translate(44 402)">
+    <rect width="432" height="243" fill="#ffffff"/>
+    <rect x="1" y="1" width="430" height="241" fill="none" stroke="#80746C" stroke-opacity=".38"/>
+    <text x="24" y="29" fill="#8F001A" class="label">WEEK AT A GLANCE</text>
+    <g transform="translate(24 43)">
+      <rect width="384" height="157" fill="#ffffff" stroke="#80746C" stroke-opacity=".5"/>
+      <rect width="384" height="29" fill="#80746C" fill-opacity=".09"/>
+      <g stroke="#80746C" stroke-opacity=".25">
+        <line x1="64" y1="0" x2="64" y2="157"/>
+        <line x1="128" y1="0" x2="128" y2="157"/>
+        <line x1="192" y1="0" x2="192" y2="157"/>
+        <line x1="256" y1="0" x2="256" y2="157"/>
+        <line x1="320" y1="0" x2="320" y2="157"/>
+        <line x1="0" y1="71" x2="384" y2="71"/>
+        <line x1="0" y1="113" x2="384" y2="113"/>
+      </g>
+      <g class="micro" fill="#80746C" text-anchor="middle">
+        <text x="96" y="19">M</text><text x="160" y="19">T</text><text x="224" y="19">W</text>
+        <text x="288" y="19">T</text><text x="352" y="19">F</text>
+      </g>
+      <g fill="#80746C" fill-opacity=".22">
+        <rect x="71" y="36" width="49" height="28"/>
+        <rect x="135" y="78" width="49" height="28"/>
+        <rect x="199" y="36" width="49" height="28"/>
+        <rect x="263" y="120" width="49" height="27"/>
+        <rect x="327" y="78" width="49" height="28"/>
+      </g>
+      <g fill="#8F001A" fill-opacity=".88">
+        <rect x="7" y="78" width="49" height="28"/>
+        <rect x="135" y="36" width="49" height="28"/>
+        <rect x="263" y="78" width="49" height="28"/>
+      </g>
+    </g>
+    <text x="24" y="224" fill="#80746C" class="micro">BLOCKS BUILD INTO A CLEAR WEEKLY VIEW</text>
+  </g>
+  <text x="44" y="667" fill="#8F001A" class="label">04 / 15–21 SEC</text>
+  <text x="44" y="687" fill="#80746C" class="caption">Every possible schedule, built from your courses.</text>
+
+  <!-- Shot 5 -->
+  <g transform="translate(504 402)">
+    <rect width="432" height="243" fill="#8F001A"/>
+    <rect x="1" y="1" width="430" height="241" fill="none" stroke="#ffffff" stroke-opacity=".35"/>
+    <text x="28" y="32" fill="#ffffff" class="label">COMPARE / CHOOSE</text>
+    <line x1="28" y1="45" x2="404" y2="45" stroke="#ffffff" stroke-opacity=".4"/>
+    <g transform="translate(28 69)">
+      <rect width="112" height="127" fill="#ffffff" fill-opacity=".12" stroke="#ffffff" stroke-opacity=".6"/>
+      <rect x="126" width="112" height="127" fill="#ffffff" stroke="#ffffff"/>
+      <rect x="252" width="112" height="127" fill="#ffffff" fill-opacity=".12" stroke="#ffffff" stroke-opacity=".6"/>
+      <g fill="#ffffff" fill-opacity=".58">
+        <rect x="12" y="20" width="27" height="25"/><rect x="47" y="51" width="27" height="25"/><rect x="82" y="20" width="18" height="25"/>
+        <rect x="264" y="51" width="27" height="25"/><rect x="299" y="20" width="27" height="25"/><rect x="264" y="82" width="62" height="25"/>
+      </g>
+      <g fill="#8F001A" fill-opacity=".84">
+        <rect x="138" y="20" width="27" height="25"/><rect x="173" y="51" width="27" height="25"/><rect x="208" y="20" width="18" height="25"/>
+        <rect x="138" y="82" width="62" height="25"/>
+      </g>
+      <rect x="126" y="127" width="112" height="4" fill="#ffffff"/>
+    </g>
+    <text x="28" y="220" fill="#ffffff" class="serif" font-size="17">Pick the one that works best for you.</text>
+  </g>
+  <text x="504" y="667" fill="#8F001A" class="label">05 / 21–25 SEC</text>
+  <text x="504" y="687" fill="#80746C" class="caption">One schedule is selected; the others recede.</text>
+
+  <!-- Shot 6 -->
+  <g transform="translate(964 402)">
+    <rect width="432" height="243" fill="#ffffff"/>
+    <rect x="1" y="1" width="430" height="241" fill="none" stroke="#80746C" stroke-opacity=".38"/>
+    <rect x="0" y="0" width="12" height="243" fill="#8F001A"/>
+    <text x="34" y="39" fill="#80746C" class="sans" font-size="14">Free to use. We only make money</text>
+    <text x="34" y="60" fill="#80746C" class="sans" font-size="14">from occasional ads.</text>
+    <line x1="34" y1="82" x2="398" y2="82" class="rule"/>
+    <text x="34" y="127" fill="#8F001A" class="serif" font-size="25">Your schedule,</text>
+    <text x="34" y="156" fill="#8F001A" class="serif" font-size="25">your success</text>
+    <rect x="34" y="180" width="126" height="38" fill="#8F001A"/>
+    <text x="97" y="204" fill="#ffffff" class="sans" font-size="13" font-weight="700" text-anchor="middle">Try it now!</text>
+    <image href="uoplannerlogo.png" x="337" y="157" width="70" height="70" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+  <text x="964" y="667" fill="#8F001A" class="label">06 / 25–30 SEC</text>
+  <text x="964" y="687" fill="#80746C" class="caption">Free-to-use note, tagline, and call to action</text>
+
+  <line x1="44" y1="718" x2="1396" y2="718" class="rule"/>
+  <text x="44" y="741" fill="#80746C" class="micro">SHORT ORIGINAL MUSIC · NO VOICE-OVER · ENGLISH ON-SCREEN TEXT</text>
+  <text x="1396" y="741" fill="#80746C" class="micro" text-anchor="end">PREVIEW ONLY — FULL FILM NOT RENDERED</text>
+</svg>

@@ -1,8 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { CourseCalendar } from "@/components/CourseCalendar";
-import { Interactive3DScene } from "@/components/Interactive3DScene";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { useSite } from "@/components/SiteProvider";
 
@@ -22,21 +22,29 @@ export default function HomePage() {
   return (
     <main>
       <section className="hero">
-        <div className="hero-content">
-          <ScrollReveal variant="left">
-            <div className="hero-copy">
-              <p className="eyebrow">{message.heroKicker}</p>
-              <h1>{message.heroTitle}</h1>
-              <p className="hero-description">{message.heroText}</p>
-              <div className="hero-actions">
-                <a className="button-primary" href="#schedule">{message.heroPrimary}</a>
-                <a className="button-secondary" href="#how-it-works">{message.heroSecondary} <span aria-hidden="true">↓</span></a>
-              </div>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal className="hero-art-space hero-calendar-art" variant="scale" delayMs={160}>
-            <Interactive3DScene kind="product" />
-          </ScrollReveal>
+        <h1 className="hero-accessible-title">{message.heroTitle}</h1>
+        <video
+          className="hero-video"
+          aria-hidden="true"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          poster="/media/uoplanner-home-poster.jpg"
+          tabIndex={-1}
+        >
+          <source src="/media/uoplanner-home-hero.mp4" type="video/mp4" />
+        </video>
+        <div className="hero-brand-lockup">
+          <Image
+            className="hero-brand-logo"
+            src="/media/uoplannerlogo.png"
+            alt="UOPlanner"
+            width={246}
+            height={194}
+          />
+          <p className="hero-brand-tagline">Your schedule, your success</p>
         </div>
       </section>
 
