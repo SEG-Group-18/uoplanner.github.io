@@ -265,13 +265,13 @@ export const messages: Record<Locale, Messages> = {
     teamKicker: "Our mission",
     teamTitle: "Built by students, for students.",
     teamText:
-      "We are software engineering and computer science students at the University of Ottawa, bringing our own course-planning frustrations into a shared project.",
+      "We are software engineering students at the University of Ottawa, bringing our own course-planning frustrations into a shared project.",
     teamMissionKicker: "What we learned by trying to plan",
     teamMissionTitle: "Small scheduling snags add up.",
     teamMissionText:
       "As a team, we ran into the familiar friction of comparing scattered course listings, checking that lectures and labs fit together, and weighing a conflict-free timetable against long gaps or inconvenient days. Those shared challenges shaped our goal: make schedule options easier to see and compare, while leaving official availability and registration in uoZone.",
     teamRole: "UOPlanner co-creator",
-    teamProgram: "Software Engineering or Computer Science · University of Ottawa",
+    teamProgram: "Software Engineering · University of Ottawa",
     teamProgramLabel: "Program",
     teamContributionLabel: "Contribution",
     teamExpandAction: "Reveal contribution",
@@ -476,13 +476,13 @@ export const messages: Record<Locale, Messages> = {
     teamKicker: "Notre mission",
     teamTitle: "Créé par des étudiants, pour les étudiants.",
     teamText:
-      "Nous sommes des étudiants en génie logiciel et en informatique à l’Université d’Ottawa. Les difficultés que nous avons rencontrées en planifiant nos cours sont devenues un projet commun.",
+      "Nous sommes des étudiants en génie logiciel à l’Université d’Ottawa. Les difficultés que nous avons rencontrées en planifiant nos cours sont devenues un projet commun.",
     teamMissionKicker: "Ce que nos essais nous ont appris",
     teamMissionTitle: "Les petits casse-têtes s’accumulent.",
     teamMissionText:
       "En équipe, nous avons connu les difficultés courantes : comparer des fiches de cours dispersées, vérifier que les cours magistraux et les laboratoires s’agencent, puis évaluer un horaire sans conflit mais rempli de longues pauses ou de journées peu pratiques. Ces défis communs ont orienté notre objectif : rendre les options d’horaire plus faciles à consulter et à comparer, tout en laissant la vérification des places et l’inscription officielle à uoZone.",
     teamRole: "Co-créateur·rice d’UOPlanner",
-    teamProgram: "Génie logiciel ou informatique · Université d’Ottawa",
+    teamProgram: "Génie logiciel · Université d’Ottawa",
     teamProgramLabel: "Programme",
     teamContributionLabel: "Contribution",
     teamExpandAction: "Voir la contribution",

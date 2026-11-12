@@ -45,7 +45,7 @@
       "hero.text": "Découvrez les personnes qui simplifient la planification de votre semestre.",
       "mission.kicker": "Notre mission",
       "mission.title": "Créé par des étudiants, pour les étudiants.",
-      "mission.text": "UOPlanner est conçu par des étudiants en génie logiciel et en informatique de l’Université d’Ottawa qui souhaitent simplifier un défi courant de la planification universitaire. Notre équipe réunit développement technique, réflexion produit et expérience utilisateur pour transformer une tâche stressante en un processus plus clair et plus facile à gérer. Nous croyons qu’une semaine mieux planifiée aide les étudiants à faire de la place pour leurs études et leur vie.",
+      "mission.text": "UOPlanner est conçu par des étudiants en génie logiciel  de l’Université d’Ottawa qui souhaitent simplifier un défi courant de la planification universitaire. Notre équipe réunit développement technique, réflexion produit et expérience utilisateur pour transformer une tâche stressante en un processus plus clair et plus facile à gérer. Nous croyons qu’une semaine mieux planifiée aide les étudiants à faire de la place pour leurs études et leur vie.",
       "lang.switch": "Passer en anglais",
       "theme.toDark": "Passer en mode sombre",
       "theme.toLight": "Passer en mode clair"

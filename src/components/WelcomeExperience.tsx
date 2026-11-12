@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState, type AnimationEvent, type ReactNode } from "react";
 import { RotatingGlobe } from "@/components/RotatingGlobe";
 import { useSite } from "@/components/SiteProvider";
@@ -75,8 +76,13 @@ export function WelcomeExperience({ children }: { children: ReactNode }) {
           >
             <div className="welcome-copy">
               <span className="welcome-brand">
-                <span className="welcome-brand-mark" aria-hidden="true">UO</span>
-                UOPlanner
+                <Image
+                  className="welcome-brand-logo"
+                  src="/media/uoplannerlogo.png"
+                  alt="UOPlanner"
+                  width={246}
+                  height={194}
+                />
               </span>
               <p className="welcome-eyebrow">{message.welcomeEyebrow}</p>
               <h1 id="welcome-title">{message.welcomeTitle}</h1>

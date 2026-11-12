@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { CourseCalendar } from "@/components/CourseCalendar";
 import { ScrollReveal } from "@/components/ScrollReveal";
@@ -36,16 +35,6 @@ export default function HomePage() {
         >
           <source src="/media/uoplanner-home-hero.mp4" type="video/mp4" />
         </video>
-        <div className="hero-brand-lockup">
-          <Image
-            className="hero-brand-logo"
-            src="/media/uoplannerlogo.png"
-            alt="UOPlanner"
-            width={246}
-            height={194}
-          />
-          <p className="hero-brand-tagline">Your schedule, your success</p>
-        </div>
       </section>
 
       <div className="page-content">

@@ -2,22 +2,13 @@
 
 import { useSite } from "@/components/SiteProvider";
 import { ContentHero } from "@/components/ContentHero";
-import { Interactive3DScene } from "@/components/Interactive3DScene";
-import {
-  useEffect,
-  useRef,
-  useState,
-  type AnimationEvent,
-  type CSSProperties,
-} from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 
 export default function ProductPage() {
   const { message } = useSite();
-  const [selectedFeature, setSelectedFeature] = useState<number | null>(null);
-  const [isClosing, setIsClosing] = useState(false);
-  const featureDialog = useRef<HTMLDialogElement>(null);
   const featureList = useRef<HTMLOListElement>(null);
-  const closeTimeout = useRef<number | null>(null);
+  const featureDialog = useRef<HTMLDialogElement>(null);
+  const [selectedFeature, setSelectedFeature] = useState<number | null>(null);
 
   useEffect(() => {
     const list = featureList.current;
@@ -53,45 +44,12 @@ export default function ProductPage() {
   }, []);
 
   useEffect(() => {
-    if (selectedFeature !== null && !featureDialog.current?.open) {
-      featureDialog.current?.showModal();
-      featureDialog.current?.querySelector<HTMLButtonElement>(".feature-dialog-close")?.focus();
+    const dialog = featureDialog.current;
+    if (selectedFeature !== null && dialog && !dialog.open) {
+      dialog.showModal();
+      dialog.querySelector<HTMLButtonElement>(".feature-dialog-close")?.focus();
     }
   }, [selectedFeature]);
-
-  useEffect(() => () => {
-    if (closeTimeout.current !== null) {
-      window.clearTimeout(closeTimeout.current);
-    }
-  }, []);
-
-  function finishClose() {
-    if (closeTimeout.current !== null) {
-      window.clearTimeout(closeTimeout.current);
-      closeTimeout.current = null;
-    }
-    featureDialog.current?.close();
-    setIsClosing(false);
-    setSelectedFeature(null);
-  }
-
-  function closeFeatureDialog() {
-    if (!featureDialog.current?.open || isClosing || featureDialog.current.dataset.closing === "true") {
-      return;
-    }
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      finishClose();
-      return;
-    }
-    setIsClosing(true);
-    closeTimeout.current = window.setTimeout(finishClose, 240);
-  }
-
-  function handleDialogAnimationEnd(event: AnimationEvent<HTMLDialogElement>) {
-    if (event.target === event.currentTarget && event.animationName === "feature-dialog-out") {
-      finishClose();
-    }
-  }
 
   return (
     <main>
@@ -134,23 +92,11 @@ export default function ProductPage() {
       <dialog
         ref={featureDialog}
         className="feature-dialog"
-        data-closing={isClosing || undefined}
         aria-labelledby="feature-dialog-title"
-        onAnimationEnd={handleDialogAnimationEnd}
-        onCancel={(event) => {
-          event.preventDefault();
-          closeFeatureDialog();
-        }}
-        onKeyDown={(event) => {
-          if (event.key === "Escape") {
-            event.preventDefault();
-            closeFeatureDialog();
-          }
-        }}
         onClose={() => setSelectedFeature(null)}
         onClick={(event) => {
           if (event.target === featureDialog.current) {
-            closeFeatureDialog();
+            featureDialog.current.close();
           }
         }}
       >
@@ -164,13 +110,10 @@ export default function ProductPage() {
                 className="feature-dialog-close"
                 type="button"
                 aria-label={message.productDialogClose}
-                onClick={closeFeatureDialog}
+                onClick={() => featureDialog.current?.close()}
               >
                 ×
               </button>
-            </div>
-            <div className="feature-preview">
-              <Interactive3DScene kind="feature" featureIndex={selectedFeature} />
             </div>
             <span className="feature-dialog-icon" aria-hidden="true">
               {String(selectedFeature + 1).padStart(2, "0")}
@@ -182,7 +125,7 @@ export default function ProductPage() {
             <button
               className="feature-dialog-done"
               type="button"
-              onClick={closeFeatureDialog}
+              onClick={() => featureDialog.current?.close()}
             >
               {message.productDialogClose}
             </button>

@@ -67,6 +67,15 @@ describe("localized product information", () => {
     expect(messages.fr.welcomeAction.length).toBeGreaterThan(0);
   });
 
+  it("describes the team as software engineering students only", () => {
+    expect(messages.en.teamText).toContain("software engineering students");
+    expect(messages.en.teamText).not.toContain("computer science");
+    expect(messages.en.teamProgram).toBe("Software Engineering · University of Ottawa");
+    expect(messages.fr.teamText).toContain("génie logiciel");
+    expect(messages.fr.teamText).not.toContain("informatique");
+    expect(messages.fr.teamProgram).toBe("Génie logiciel · Université d’Ottawa");
+  });
+
   it("uses a catchy localized headline for the schedule preview", () => {
     expect(messages.en.scheduleTitle).toBe("Your week, without the scheduling scramble.");
     expect(messages.fr.scheduleTitle).toBe("Votre semaine, sans casse-tête d’horaire.");

@@ -10,18 +10,12 @@ const Scene = dynamic(
   },
 );
 
-export type SceneKind = "product" | "feature";
+export type SceneKind = "product";
 
-export function Interactive3DScene({
-  kind,
-  featureIndex = 0,
-}: {
-  kind: SceneKind;
-  featureIndex?: number;
-}) {
+export function Interactive3DScene({ kind }: { kind: SceneKind }) {
   return (
     <div className={`subpage-scene subpage-scene-${kind}`} aria-hidden="true">
-      <Scene kind={kind} featureIndex={featureIndex} />
+      <Scene />
     </div>
   );
 }

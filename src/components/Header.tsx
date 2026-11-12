@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useSite } from "@/components/SiteProvider";
@@ -19,10 +20,14 @@ export function Header() {
     <header className="site-header">
       <div className="header-inner">
         <Link className="brand" href="/" aria-label={message.brand}>
-          <span className="brand-mark" aria-hidden="true">
-            UO
-          </span>
-          <span>{message.brand}</span>
+          <Image
+            className="brand-logo"
+            src="/media/uoplannerlogo.png"
+            alt=""
+            width={246}
+            height={194}
+            preload
+          />
         </Link>
         <nav className="main-nav" aria-label={locale === "fr" ? "Principale" : "Main"}>
           {links.map(({ href, label }) => {
