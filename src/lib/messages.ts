@@ -51,13 +51,9 @@ type Messages = {
   scheduleDescription: string;
   scheduleBadge: string;
   scheduleNote: string;
-  alternativesNote: string;
+  scheduleBlocksNote: string;
   timeLabel: string;
   weekdays: string[];
-  lecture: string;
-  lab: string;
-  discussion: string;
-  tutorial: string;
   productKicker: string;
   productTitle: string;
   productText: string;
@@ -115,7 +111,7 @@ export const messages: Record<Locale, Messages> = {
       },
       {
         question: "How do I read the sample schedule?",
-        answer: "Use the weekday columns and time labels to follow each class. The SEG 2900 tutorial rooms are alternatives for the same meeting time, not three classes at once.",
+        answer: "Use the weekday columns and time labels to follow each planned session. The empty blocks are placeholders and don’t identify specific courses or programs.",
       },
       {
         question: "Can I register here?",
@@ -171,21 +167,17 @@ export const messages: Record<Locale, Messages> = {
     premiumTeaserTitle: "Want more ways to fine-tune your schedule?",
     premiumTeaserText:
       "Explore the planned Premium tier for advanced planning preferences at $10 per month.",
-    scheduleKicker: "A real week, at a glance",
+    scheduleKicker: "A week that fits any program",
     scheduleTitle: "Your week, without the scheduling scramble.",
     scheduleDescription:
-      "Lectures, a lab, and a discussion group laid out by day and time. The calendar uses the classes and locations visible in your schedule image.",
-    scheduleBadge: "MON–FRI · SAMPLE",
+      "A course-free weekly grid that shows how schedules can take shape across science, engineering, arts, and every other program.",
+    scheduleBadge: "MON–FRI · ILLUSTRATION",
     scheduleNote:
-      "Planning preview only. Check current section availability and complete official registration in uoZone.",
-    alternativesNote:
-      "Your image shows three room listings for the same SEG 2900 tutorial time. They are shown as location alternatives, not three simultaneous classes.",
+      "Illustration only. Your actual courses and available times depend on your program and current course listings.",
+    scheduleBlocksNote:
+      "Empty blocks stand in for course sessions; no specific subjects or majors are shown.",
     timeLabel: "TIME",
     weekdays: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    lecture: "Lecture",
-    lab: "Laboratory",
-    discussion: "Discussion group",
-    tutorial: "Tutorial",
     productKicker: "Your planning toolkit",
     productTitle: "Build a week that fits your life.",
     productText:
@@ -323,7 +315,7 @@ export const messages: Record<Locale, Messages> = {
       },
       {
         question: "Comment lire l’horaire exemple?",
-        answer: "Utilisez les colonnes des jours et les heures pour suivre les cours. Les salles du tutorat SEG 2900 sont des choix pour le même créneau, et non trois cours simultanés.",
+        answer: "Utilisez les colonnes des jours et les heures pour repérer les séances. Les cases vides sont des repères visuels et ne représentent aucun cours ni programme en particulier.",
       },
       {
         question: "Puis-je m’inscrire ici?",
@@ -379,21 +371,17 @@ export const messages: Record<Locale, Messages> = {
     premiumTeaserTitle: "Envie d’affiner davantage votre horaire?",
     premiumTeaserText:
       "Découvrez le forfait Premium prévu à 10 $ par mois et ses préférences avancées.",
-    scheduleKicker: "Une vraie semaine, en un coup d’œil",
+    scheduleKicker: "Un horaire adapté à chaque programme",
     scheduleTitle: "Votre semaine, sans casse-tête d’horaire.",
     scheduleDescription:
-      "Cours magistraux, laboratoire et groupe de discussion selon le jour et l’heure. Le calendrier reprend les cours et les lieux visibles dans l’image fournie.",
-    scheduleBadge: "LUN–VEN · EXEMPLE",
+      "Une grille hebdomadaire sans cours précis, qui illustre la planification en sciences, en génie, en arts et dans tous les autres programmes.",
+    scheduleBadge: "LUN–VEN · ILLUSTRATION",
     scheduleNote:
-      "Aperçu de planification seulement. Vérifiez les places actuelles et effectuez l’inscription officielle dans uoZone.",
-    alternativesNote:
-      "L’image présente trois salles pour le même créneau de tutorat SEG 2900. Elles sont affichées comme des lieux alternatifs, et non comme trois cours simultanés.",
+      "Illustration seulement. Vos cours et les heures offertes dépendent de votre programme et des horaires publiés.",
+    scheduleBlocksNote:
+      "Les cases vides représentent des séances de cours, sans matière ni programme particulier.",
     timeLabel: "HEURE",
     weekdays: ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi"],
-    lecture: "Cours magistral",
-    lab: "Laboratoire",
-    discussion: "Groupe de discussion",
-    tutorial: "Tutoriel",
     productKicker: "Vos outils de planification",
     productTitle: "Une semaine qui convient à votre quotidien.",
     productText:

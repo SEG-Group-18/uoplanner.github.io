@@ -2,7 +2,7 @@
 
 import type { CSSProperties } from "react";
 import { useSite } from "@/components/SiteProvider";
-import { courseEvents, formatScheduleTime } from "@/lib/schedule";
+import { scheduleBlocks } from "@/lib/schedule";
 
 export function CalendarMotion() {
   const { message } = useSite();
@@ -24,27 +24,24 @@ export function CalendarMotion() {
                 <span className="calendar-motion-day-name">{day.slice(0, 3)}</span>
                 <span className="calendar-motion-rule" />
                 <div className="calendar-motion-events">
-                  {courseEvents
-                    .filter((event) => event.day === dayIndex)
-                    .slice(0, 3)
-                    .map((event, eventIndex) => (
+                  {scheduleBlocks
+                    .filter((block) => block.day === dayIndex)
+                    .map((block, blockIndex) => (
                       <span
-                        className={`calendar-motion-event calendar-motion-${event.kind}`}
-                        key={`${event.code}-${event.start}`}
+                        className="calendar-motion-block"
+                        key={`${block.day}-${block.start}`}
                         style={{
-                          "--calendar-delay": `${dayIndex * 100 + eventIndex * 80 + 300}ms`,
+                          "--calendar-delay": `${dayIndex * 100 + blockIndex * 80 + 300}ms`,
+                          height: `${Math.max(14, (block.end - block.start) * 0.34)}px`,
                         } as CSSProperties}
-                      >
-                        <strong>{event.code.split(" · ")[0]}</strong>
-                        <small>{formatScheduleTime(event.start)}</small>
-                      </span>
+                      />
                     ))}
                 </div>
               </div>
             ))}
           </div>
           <div className="calendar-motion-footer">
-            <span>{message.alternativesNote.split(".")[0]}.</span>
+            <span>{message.scheduleBlocksNote}</span>
             <span className="calendar-motion-mark" />
           </div>
         </div>

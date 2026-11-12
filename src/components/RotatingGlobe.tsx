@@ -1,17 +1,22 @@
+"use client";
+
+import dynamic from "next/dynamic";
+import { useSite } from "@/components/SiteProvider";
+
+const PlannerScene3D = dynamic(
+  () => import("@/components/PlannerScene3D").then((module) => module.PlannerScene3D),
+  {
+    ssr: false,
+    loading: () => <div className="globe-scene-loading" aria-hidden="true" />,
+  },
+);
+
 export function RotatingGlobe() {
+  const { theme } = useSite();
+
   return (
     <div className="globe-stage" aria-hidden="true">
-      <div className="globe-orbit globe-orbit-back" />
-      <div className="globe-sphere">
-        <div className="globe-longitudes" />
-        <span className="globe-latitude globe-latitude-top" />
-        <span className="globe-latitude globe-latitude-middle" />
-        <span className="globe-latitude globe-latitude-bottom" />
-        <span className="globe-shine" />
-      </div>
-      <div className="globe-orbit globe-orbit-front" />
-      <span className="globe-spark globe-spark-one" />
-      <span className="globe-spark globe-spark-two" />
+      <PlannerScene3D theme={theme} />
     </div>
   );
 }

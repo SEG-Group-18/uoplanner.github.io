@@ -1,44 +1,27 @@
 import { describe, expect, it } from "vitest";
 import { messages } from "./messages";
-import { courseEvents, formatScheduleTime } from "./schedule";
+import { scheduleBlocks } from "./schedule";
 
-describe("sample schedule", () => {
-  it("preserves the classes and times from the supplied weekly schedule", () => {
-    expect(courseEvents).toHaveLength(12);
-    expect(formatScheduleTime(120)).toBe("10:00 AM");
-    expect(courseEvents).toContainEqual(
-      expect.objectContaining({
-        day: 2,
-        start: 210,
-        end: 380,
-        code: "ITI 1520 · B02",
-        kind: "lab",
-      }),
-    );
-    expect(courseEvents).toContainEqual(
-      expect.objectContaining({
-        day: 3,
-        start: 660,
-        end: 830,
-        code: "FRA 1528 · A00",
-      }),
-    );
+describe("generic weekly schedule illustration", () => {
+  it("uses unlabeled blocks without associating them with a course or major", () => {
+    expect(scheduleBlocks).toHaveLength(12);
+    for (const block of scheduleBlocks) {
+      expect(Object.keys(block).sort()).toEqual(["day", "end", "start"]);
+      expect(block.day).toBeGreaterThanOrEqual(0);
+      expect(block.day).toBeLessThan(5);
+      expect(block.start).toBeGreaterThanOrEqual(0);
+      expect(block.end).toBeGreaterThan(block.start);
+    }
   });
 
-  it("shows tutorial rooms as alternatives instead of simultaneous sections", () => {
-    const tutorials = courseEvents.filter((event) => event.code === "SEG 2900 · A01");
-    expect(tutorials).toHaveLength(1);
-    expect(tutorials[0].locations).toHaveLength(3);
-  });
-
-  it("keeps the sample course meetings conflict-free each day", () => {
+  it("keeps the placeholder blocks from overlapping within each day", () => {
     for (let day = 0; day < 5; day += 1) {
-      const dailyEvents = courseEvents
-        .filter((event) => event.day === day)
+      const dailyBlocks = scheduleBlocks
+        .filter((block) => block.day === day)
         .sort((left, right) => left.start - right.start);
-      for (let index = 1; index < dailyEvents.length; index += 1) {
-        expect(dailyEvents[index].start).toBeGreaterThanOrEqual(
-          dailyEvents[index - 1].end,
+      for (let index = 1; index < dailyBlocks.length; index += 1) {
+        expect(dailyBlocks[index].start).toBeGreaterThanOrEqual(
+          dailyBlocks[index - 1].end,
         );
       }
     }
@@ -65,6 +48,8 @@ describe("localized product information", () => {
     expect(messages.fr.assistantQuestions).toHaveLength(5);
     expect(messages.en.assistantQuestions.every(({ answer }) => answer.length > 0)).toBe(true);
     expect(messages.fr.assistantQuestions.every(({ answer }) => answer.length > 0)).toBe(true);
+    expect(messages.en.assistantQuestions[1].answer).toContain("empty blocks");
+    expect(messages.fr.assistantQuestions[1].answer).toContain("cases vides");
   });
 
   it("provides five localized feature explanations and welcome copy", () => {
@@ -85,5 +70,7 @@ describe("localized product information", () => {
   it("uses a catchy localized headline for the schedule preview", () => {
     expect(messages.en.scheduleTitle).toBe("Your week, without the scheduling scramble.");
     expect(messages.fr.scheduleTitle).toBe("Votre semaine, sans casse-tête d’horaire.");
+    expect(messages.en.scheduleBlocksNote).toContain("Empty blocks");
+    expect(messages.fr.scheduleBlocksNote).toContain("cases vides");
   });
 });

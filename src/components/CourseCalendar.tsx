@@ -2,7 +2,7 @@
 
 import { useSite } from "@/components/SiteProvider";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { courseEvents, formatScheduleTime } from "@/lib/schedule";
+import { scheduleBlocks } from "@/lib/schedule";
 
 export function CourseCalendar() {
   const { message, locale } = useSite();
@@ -50,33 +50,23 @@ export function CourseCalendar() {
                 aria-label={day}
                 role="group"
               >
-                {courseEvents.filter((event) => event.day === dayIndex).map((event) => (
-                  <article
-                    className={`course-event event-${event.kind}`}
-                    key={`${event.code}-${event.start}`}
+                {scheduleBlocks.filter((block) => block.day === dayIndex).map((block) => (
+                  <div
+                    className="schedule-block"
+                    key={`${block.day}-${block.start}`}
                     style={{
-                      top: `${event.start * 0.9}px`,
-                      height: `${(event.end - event.start) * 0.9}px`,
+                      top: `${block.start * 0.9}px`,
+                      height: `${(block.end - block.start) * 0.9}px`,
                     }}
-                    aria-label={`${event.code}, ${message[event.kind]}, ${formatScheduleTime(event.start)}–${formatScheduleTime(event.end)}, ${event.room}`}
-                  >
-                    <strong>{event.code}</strong>
-                    <span className="event-kind">{message[event.kind]}</span>
-                    <time>{formatScheduleTime(event.start)}–{formatScheduleTime(event.end)}</time>
-                    <span className="event-room">{event.room}</span>
-                    {event.locations && (
-                      <span className="event-alternatives">
-                        {event.locations.map((location) => <span key={location}>{location}</span>)}
-                      </span>
-                    )}
-                  </article>
+                    aria-hidden="true"
+                  />
                 ))}
               </div>
             ))}
           </div>
         </div>
         <div className="calendar-notes">
-          <p><span className="note-dot" aria-hidden="true" />{message.alternativesNote}</p>
+          <p><span className="note-dot" aria-hidden="true" />{message.scheduleBlocksNote}</p>
           <p>{message.scheduleNote}</p>
         </div>
       </div>
