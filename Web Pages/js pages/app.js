@@ -1,4 +1,4 @@
-import { messages } from "./messages.js";
+import { messages } from "./messages.js?v=4";
 
 // This tells the script which page is open.
 const page = document.body.dataset.page;
