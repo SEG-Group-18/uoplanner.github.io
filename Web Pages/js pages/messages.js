@@ -49,7 +49,7 @@ export const messages = {
       "Compare valid course combinations, avoid timetable conflicts, and find a week that works for your life at uOttawa.",
     heroPrimary: "See your sample week",
     heroSecondary: "How it works",
-    introKicker: "A calmer way to plan",
+    introKicker: "Your schedule, your success",
     introTitle: "From course list to a week that works.",
     introText:
       "Registration can mean jumping between uoZone listings and trying to fit lectures, labs, and discussion groups together by hand. UOPlanner checks the combinations for schedule conflicts and lays out valid options so you can spend less time piecing together your week.",
@@ -179,6 +179,13 @@ export const messages = {
     teamProgram: "Software Engineering · University of Ottawa",
     teamProgramLabel: "Program",
     teamContributionLabel: "Contribution",
+    teamContributions: {
+      "Robin Ineza": "Home Page",
+      "Samuel Brownlee": "Home Page",
+      "James Wong": "Product Features Page",
+      "Quérèn De Souza": "Pricing page",
+      "Lamar Elbakkoush": "Team Page",
+    },
     teamExpandAction: "Reveal contribution",
     teamCollapseAction: "Return to portrait",
     teamChallenges: [
@@ -390,6 +397,13 @@ export const messages = {
     teamProgram: "Génie logiciel · Université d’Ottawa",
     teamProgramLabel: "Programme",
     teamContributionLabel: "Contribution",
+    teamContributions: {
+      "Robin Ineza": "Home Page",
+      "Samuel Brownlee": "Home Page",
+      "James Wong": "Product Features Page",
+      "Quérèn De Souza": "Pricing page",
+      "Lamar Elbakkoush": "Team Page",
+    },
     teamExpandAction: "Voir la contribution",
     teamCollapseAction: "Retour au portrait",
     teamChallenges: [

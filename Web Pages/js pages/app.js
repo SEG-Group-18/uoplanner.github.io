@@ -275,7 +275,7 @@ function renderTeam() {
             <span class="team-detail-label">${text.teamProgramLabel}</span>
             <span class="team-detail-value">${text.teamProgram}</span>
             <span class="team-detail-label">${text.teamContributionLabel}</span>
-            <span class="team-member-description">${challenge.title}: ${challenge.text}</span>
+            <span class="team-member-description">${text.teamContributions[member.name]}</span>
             <span class="team-card-hint">${text.teamCollapseAction}<span aria-hidden="true">↙</span></span>
           </span>
         </span>
