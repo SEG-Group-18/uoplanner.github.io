@@ -1,32 +1,28 @@
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=transparent&fontColor=800020&fontSize=48&fontFamily=Segoe%20UI&height=90&width=922&text=Group%2018%20-%20UO%20Coders" alt="Group 18 - UO Coders" />
-</p>
+# UOPlanner
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Segoe+UI&weight=600&size=22&pause=1000&color=800020&center=true&vCenter=true&width=680&height=44&lines=UOPlanner;Course%20Schedule%20Generator%20for%20uOttawa%20Students" alt="UOPlanner Header" />
-</p>
+UOPlanner helps uOttawa students compare course schedules and find a week that works.
 
-## Team Members
-- James Wong — 300544288
-- Samuel Brownlee — 300545351
-- Quérèn De Souza — 300447342
-- Robin Ineza Ineza — 300562928
-- Lamar Elbakkoush — 300556906
+## Run locally
 
+Python is already included on many computers. From this folder, run:
 
-## Product Name
-UOPlanner
+```text
+python -m http.server 8000
+```
 
-## Product Description
-UOPlanner is a website designed to help uOttawa students create their course schedules more easily.
+Then open <http://localhost:8000/Web%20Pages/html%20pages/index.html>.
 
-Users enter their program of study and year of study. The website then generates all possible schedule combinations based on their courses, allowing students to choose the schedule that works best for them.
+## Pages
 
-The goal of UOPlanner is to make course planning easier and help students navigate the scheduling process without having to manually search through uoZone for different course combinations.
+- Home: schedule preview and product overview
+- Product: feature details
+- Pricing: plans and questions
+- Team: expandable team profiles
 
-HTML Pages
+All page files are kept in three folders inside `Web Pages`:
 
-Home Page - Samuel / Robin
-Product Features Page - James
-Pricing page - Queren
-Team Page - Lamar
+- `html pages`: `index.html`, `product.html`, `pricing.html`, and `team.html`
+- `js pages`: `app.js` handles interactions, and `messages.js` contains English and French text
+- `css pages`: `styles.css` is the shared stylesheet
+
+The `public` folder contains images and video. `mockups` is kept for design references.

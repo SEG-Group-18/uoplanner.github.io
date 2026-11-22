@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Compare uOttawa course schedules, avoid timetable conflicts, and find a week that fits.">
+    <title>UOPlanner — Plan your Ottawa semester</title>
+    <link rel="stylesheet" href="../css%20pages/styles.css">
+    <script type="module" src="../js%20pages/app.js?v=2"></script>
+  </head>
+  <body data-page="home">
+    <div class="website-shell">
+      <!-- Main navigation -->
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand" href="index.html" aria-label="UOPlanner">
+            <img class="brand-logo" src="/public/media/uoplannerlogo.png" alt="" width="246" height="194">
+          </a>
+          <div class="header-actions">
+            <nav class="main-nav" aria-label="Main">
+              <a href="index.html" data-message="home">Home</a>
+              <a href="product.html" data-message="product">Product</a>
+              <a href="pricing.html" data-message="pricing">Pricing</a>
+              <a href="team.html" data-message="team">Team</a>
+            </nav>
+            <a class="header-cta" href="index.html#schedule">
+              <span data-message="headerCta">Plan your week</span>
+              <span aria-hidden="true">→</span>
+            </a>
+            <div class="header-tools">
+              <button class="icon-button language-button" type="button" aria-label="Switch language to French">FR</button>
+              <button class="icon-button theme-button" type="button" aria-label="Switch to dark mode">
+                <span aria-hidden="true">☾</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Home page content -->
+      <main>
+        <section class="hero">
+          <h1 class="hero-accessible-title" data-message="heroTitle">Plan your Ottawa semester with less stress</h1>
+          <video class="hero-video" aria-hidden="true" autoplay loop muted playsinline preload="metadata" poster="/public/media/uoplanner-home-poster.jpg" tabindex="-1">
+            <source src="/public/media/uoplanner-home-hero.mp4" type="video/mp4">
+          </video>
+        </section>
+
+        <div class="page-content">
+          <div class="scroll-reveal scroll-reveal-up">
+            <section id="how-it-works" aria-labelledby="intro-title">
+              <div class="section-heading">
+                <p class="eyebrow" data-message="introKicker">A calmer way to plan</p>
+                <h2 id="intro-title" data-message="introTitle">From course list to a week that works.</h2>
+                <p data-message="introText"></p>
+              </div>
+              <div class="steps-grid">
+                <div class="scroll-reveal scroll-reveal-up" data-reveal-delay="0">
+                  <article class="step-card">
+                    <span class="step-number">01</span>
+                    <h3 data-message="stepOneTitle"></h3>
+                    <p data-message="stepOneText"></p>
+                  </article>
+                </div>
+                <div class="scroll-reveal scroll-reveal-up" data-reveal-delay="100">
+                  <article class="step-card">
+                    <span class="step-number">02</span>
+                    <h3 data-message="stepTwoTitle"></h3>
+                    <p data-message="stepTwoText"></p>
+                  </article>
+                </div>
+                <div class="scroll-reveal scroll-reveal-up" data-reveal-delay="200">
+                  <article class="step-card">
+                    <span class="step-number">03</span>
+                    <h3 data-message="stepThreeTitle"></h3>
+                    <p data-message="stepThreeText"></p>
+                  </article>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div class="scroll-reveal scroll-reveal-right benefits-section">
+            <section aria-labelledby="benefits-title">
+              <div class="section-heading">
+                <p class="eyebrow" data-message="benefitsKicker"></p>
+                <h2 id="benefits-title" data-message="benefitsTitle"></h2>
+                <p data-message="benefitsText"></p>
+              </div>
+              <div class="benefits-grid">
+                <div class="scroll-reveal scroll-reveal-up" data-reveal-delay="0">
+                  <article class="benefit-card">
+                    <h3 data-message="benefitOneTitle"></h3>
+                    <p data-message="benefitOneText"></p>
+                  </article>
+                </div>
+                <div class="scroll-reveal scroll-reveal-up" data-reveal-delay="110">
+                  <article class="benefit-card">
+                    <h3 data-message="benefitTwoTitle"></h3>
+                    <p data-message="benefitTwoText"></p>
+                  </article>
+                </div>
+                <div class="scroll-reveal scroll-reveal-up" data-reveal-delay="220">
+                  <article class="benefit-card">
+                    <h3 data-message="benefitThreeTitle"></h3>
+                    <p data-message="benefitThreeText"></p>
+                  </article>
+                </div>
+              </div>
+              <div class="scroll-reveal scroll-reveal-scale" data-reveal-delay="180">
+                <a class="premium-teaser" href="pricing.html">
+                  <span>
+                    <strong data-message="premiumTeaserTitle"></strong>
+                    <span data-message="premiumTeaserText"></span>
+                  </span>
+                  <span class="premium-arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </section>
+          </div>
+
+          <div id="calendar"></div>
+        </div>
+      </main>
+
+      <!-- Links at the bottom of the page -->
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <a class="footer-brand" href="index.html" data-message="brand">UOPlanner</a>
+          <p data-message="footerText">A clearer week starts with a better plan.</p>
+          <nav aria-label="Team">
+            <a href="index.html" data-message="home">Home</a>
+            <a href="product.html" data-message="product">Product</a>
+            <a href="pricing.html" data-message="pricing">Pricing</a>
+            <a href="team.html" data-message="team">Team</a>
+          </nav>
+          <small>© 2026 UOPlanner</small>
+        </div>
+      </footer>
+      <div id="assistant"></div>
+    </div>
+  </body>
+</html>

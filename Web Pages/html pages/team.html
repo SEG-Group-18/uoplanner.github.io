@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Team | UOPlanner</title>
+    <link rel="stylesheet" href="../css%20pages/styles.css">
+    <script type="module" src="../js%20pages/app.js?v=2"></script>
+  </head>
+  <body data-page="team" class="team-page">
+    <div class="website-shell">
+      <!-- Main navigation -->
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand" href="index.html" aria-label="UOPlanner">
+            <img class="brand-logo" src="/public/media/uoplannerlogo.png" alt="" width="246" height="194">
+          </a>
+          <div class="header-actions">
+            <nav class="main-nav" aria-label="Main">
+              <a href="index.html" data-message="home">Home</a>
+              <a href="product.html" data-message="product">Product</a>
+              <a href="pricing.html" data-message="pricing">Pricing</a>
+              <a href="team.html" data-message="team">Team</a>
+            </nav>
+            <a class="header-cta" href="index.html#schedule"><span data-message="headerCta"></span><span aria-hidden="true">→</span></a>
+            <div class="header-tools">
+              <button class="icon-button language-button" type="button" aria-label="Switch language to French">FR</button>
+              <button class="icon-button theme-button" type="button" aria-label="Switch to dark mode"><span aria-hidden="true">☾</span></button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Team member cards and project story -->
+      <main class="team-page">
+        <section class="content-hero">
+          <div class="content-hero-inner">
+            <div class="content-hero-copy">
+              <p class="eyebrow" data-message="teamKicker"></p>
+              <h1 data-message="teamTitle"></h1>
+              <p data-message="teamText"></p>
+            </div>
+          </div>
+        </section>
+        <section class="content-section">
+          <div class="team-grid" id="teamGrid"></div>
+          <section class="team-story" aria-labelledby="team-story-title">
+            <p class="eyebrow" data-message="teamMissionKicker"></p>
+            <h2 id="team-story-title" data-message="teamMissionTitle"></h2>
+            <p data-message="teamMissionText"></p>
+          </section>
+        </section>
+      </main>
+
+      <!-- Links at the bottom of the page -->
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <a class="footer-brand" href="index.html" data-message="brand"></a>
+          <p data-message="footerText"></p>
+          <nav aria-label="Team">
+            <a href="index.html" data-message="home"></a>
+            <a href="product.html" data-message="product"></a>
+            <a href="pricing.html" data-message="pricing"></a>
+            <a href="team.html" data-message="team"></a>
+          </nav>
+          <small>© 2026 UOPlanner</small>
+        </div>
+      </footer>
+      <div id="assistant"></div>
+    </div>
+  </body>
+</html>

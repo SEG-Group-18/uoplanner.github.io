@@ -1,101 +1,12 @@
-export type Locale = "en" | "fr";
-
-type Messages = {
-  brand: string;
-  home: string;
-  product: string;
-  pricing: string;
-  team: string;
-  languageLabel: string;
-  themeLabel: string;
-  themeAction: string;
-  headerCta: string;
-  assistantTitle: string;
-  assistantIntro: string;
-  assistantDisclosure: string;
-  assistantPrompt: string;
-  assistantClose: string;
-  assistantQuestions: { question: string; answer: string }[];
-  welcomeEyebrow: string;
-  welcomeTitle: string;
-  welcomeText: string;
-  welcomeAction: string;
-  welcomeNote: string;
-  heroKicker: string;
-  heroTitle: string;
-  heroText: string;
-  heroPrimary: string;
-  heroSecondary: string;
-  introKicker: string;
-  introTitle: string;
-  introText: string;
-  stepOneTitle: string;
-  stepOneText: string;
-  stepTwoTitle: string;
-  stepTwoText: string;
-  stepThreeTitle: string;
-  stepThreeText: string;
-  benefitsKicker: string;
-  benefitsTitle: string;
-  benefitsText: string;
-  benefitOneTitle: string;
-  benefitOneText: string;
-  benefitTwoTitle: string;
-  benefitTwoText: string;
-  benefitThreeTitle: string;
-  benefitThreeText: string;
-  premiumTeaserTitle: string;
-  premiumTeaserText: string;
-  scheduleKicker: string;
-  scheduleTitle: string;
-  scheduleDescription: string;
-  scheduleBadge: string;
-  scheduleNote: string;
-  scheduleBlocksNote: string;
-  timeLabel: string;
-  weekdays: string[];
-  productKicker: string;
-  productTitle: string;
-  productText: string;
-  productFeatureAction: string;
-  productDialogClose: string;
-  productFeatures: { title: string; detail: string }[];
-  productDisclaimer: string;
-  pricingKicker: string;
-  pricingTitle: string;
-  pricingText: string;
-  freeName: string;
-  freeDescription: string;
-  freeFeatures: string[];
-  freeAction: string;
-  premiumName: string;
-  premiumDescription: string;
-  premiumFeatures: string[];
-  premiumAction: string;
-  perMonth: string;
-  planned: string;
-  faqKicker: string;
-  faqTitle: string;
-  faqQuestions: { question: string; answer: string }[];
-  startPlanning: string;
-  teamKicker: string;
-  teamTitle: string;
-  teamText: string;
-  teamMissionKicker: string;
-  teamMissionTitle: string;
-  teamMissionText: string;
-  teamRole: string;
-  teamProgram: string;
-  teamProgramLabel: string;
-  teamContributionLabel: string;
-  teamExpandAction: string;
-  teamCollapseAction: string;
-  teamChallenges: { title: string; text: string }[];
-  footerText: string;
-};
-
-export const messages: Record<Locale, Messages> = {
+// The words used on the site in English and French.
+export const messages = {
   en: {
+    pageTitles: {
+      home: "UOPlanner — Plan your Ottawa semester",
+      product: "Product | UOPlanner",
+      pricing: "Pricing | UOPlanner",
+      team: "Team | UOPlanner",
+    },
     brand: "UOPlanner",
     home: "Home",
     product: "Product",
@@ -132,12 +43,6 @@ export const messages: Record<Locale, Messages> = {
         answer: "The sample schedule may not reflect current offerings. Check the latest section details in uoZone before making registration decisions.",
       },
     ],
-    welcomeEyebrow: "Meet your new course-planning sidekick",
-    welcomeTitle: "Ever struggled to fit all your courses into your schedule?",
-    welcomeText:
-      "Lectures, labs, tutorials, and everything in between can be a lot to juggle. We’re here to help you find a week that fits.",
-    welcomeAction: "Show me a better week",
-    welcomeNote: "A clearer plan is just one click away.",
     heroKicker: "COURSE PLANNING, MADE CLEARER",
     heroTitle: "Plan your Ottawa semester with less stress",
     heroText:
@@ -306,6 +211,12 @@ export const messages: Record<Locale, Messages> = {
     footerText: "A clearer week starts with a better plan.",
   },
   fr: {
+    pageTitles: {
+      home: "UOPlanner — Planifiez votre session à Ottawa",
+      product: "Produit | UOPlanner",
+      pricing: "Tarifs | UOPlanner",
+      team: "Équipe | UOPlanner",
+    },
     brand: "UOPlanner",
     home: "Accueil",
     product: "Produit",
@@ -342,12 +253,6 @@ export const messages: Record<Locale, Messages> = {
         answer: "L’horaire exemple ne reflète pas nécessairement l’offre actuelle. Vérifiez les détails des groupes dans uoZone avant de vous inscrire.",
       },
     ],
-    welcomeEyebrow: "Votre nouvel allié pour planifier vos cours",
-    welcomeTitle: "Vous avez déjà eu du mal à faire entrer tous vos cours dans votre horaire?",
-    welcomeText:
-      "Cours magistraux, laboratoires, tutoriels et tout le reste : il y a beaucoup à coordonner. Nous sommes là pour vous aider à trouver une semaine qui vous convient.",
-    welcomeAction: "Découvrez un horaire plus simple",
-    welcomeNote: "Un horaire plus clair, à un clic.",
     heroKicker: "PLANIFIER SES COURS, PLUS SIMPLEMENT",
     heroTitle: "Planifiez votre session à Ottawa sans stress",
     heroText:
