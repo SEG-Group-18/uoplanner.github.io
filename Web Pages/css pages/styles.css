@@ -304,7 +304,7 @@ button { font: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
   .hero-video { display: none; }
-  .hero { background-image: url("/public/media/uoplanner-home-poster.jpg"); background-position: center; background-size: cover; }
+  .hero { background-image: url("../../public/media/uoplanner-home-poster.jpg"); background-position: center; background-size: cover; }
   .feature-list li, .feature-dialog[open] { animation: none !important; }
   .feature-list.is-scroll-ready li, .feature-list.is-scroll-ready li.is-visible { clip-path: none !important; opacity: 1 !important; transform: none !important; animation: none !important; transition: none !important; }
   .scroll-reveal, .scroll-effects-ready .scroll-reveal:not(.is-visible) { opacity: 1 !important; transform: none !important; transition: none !important; }

@@ -259,7 +259,7 @@ function renderTeam() {
         <span class="team-card-inner">
           <span class="team-card-face team-card-front">
             <span class="team-member-heading">
-              <img class="team-avatar" src="/public/media/${member.image}" alt="" width="112" height="112">
+              <img class="team-avatar" src="../../public/media/${member.image}" alt="" width="112" height="112">
               <span class="team-member-identity">
                 <span class="team-card-name">${member.name}</span>
                 <span class="team-member-role">${text.teamRole}</span>
