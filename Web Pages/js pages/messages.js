@@ -393,7 +393,14 @@ export const messages = {
     teamMissionTitle: "Les petits casse-têtes s’accumulent.",
     teamMissionText:
       "En équipe, nous avons connu les difficultés courantes : comparer des fiches de cours dispersées, vérifier que les cours magistraux et les laboratoires s’agencent, puis évaluer un horaire sans conflit mais rempli de longues pauses ou de journées peu pratiques. Ces défis communs ont orienté notre objectif : rendre les options d’horaire plus faciles à consulter et à comparer, tout en laissant la vérification des places et l’inscription officielle à uoZone.",
-    teamRole: "Co-créateur·rice d’UOPlanner",
+    teamRole: "Co-créateur d’UOPlanner",
+    teamRoles: {
+      "Samuel Brownlee": "Co-créateur d’UOPlanner",
+      "James Wong": "Co-créateur d’UOPlanner",
+      "Robin Ineza": "Co-créateur d’UOPlanner",
+      "Quérèn De Souza": "Co-créatrice d’UOPlanner",
+      "Lamar Elbakkoush": "Co-créatrice d’UOPlanner",
+    },
     teamProgram: "Génie logiciel · Université d’Ottawa",
     teamProgramLabel: "Programme",
     teamContributionLabel: "Contribution",

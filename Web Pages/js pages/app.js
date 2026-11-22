@@ -262,7 +262,7 @@ function renderTeam() {
               <img class="team-avatar" src="../../public/media/${member.image}" alt="" width="112" height="112">
               <span class="team-member-identity">
                 <span class="team-card-name">${member.name}</span>
-                <span class="team-member-role">${text.teamRole}</span>
+                <span class="team-member-role">${text.teamRoles?.[member.name] || text.teamRole}</span>
               </span>
             </span>
             <span class="team-member-program">${text.teamProgram}</span>
