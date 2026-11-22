@@ -257,6 +257,7 @@ button { font: inherit; }
 .footer-inner p { margin: 0; color: var(--muted); font-size: .88rem; }
 .footer-inner nav { display: flex; flex-wrap: wrap; gap: .9rem; }
 .footer-inner nav a { color: var(--garnet); font-size: .85rem; font-weight: 700; text-decoration: none; }
+.footer-inner .footer-team { grid-column: 1 / -1; }
 .footer-inner small { grid-column: 1 / -1; color: var(--muted); }
 
 /* Adjust the layout for smaller screens */
