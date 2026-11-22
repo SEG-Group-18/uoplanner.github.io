@@ -283,6 +283,8 @@ function renderTeam() {
     `;
   }).join("");
 
+  fitTeamCards();
+
   grid.addEventListener("click", (event) => {
     const card = event.target.closest(".team-card");
     if (!card) return;
@@ -295,6 +297,17 @@ function renderTeam() {
   });
 
 }
+
+// Make the cards taller when narrow screens wrap the text onto more lines.
+function fitTeamCards() {
+  document.querySelectorAll(".team-card").forEach((card) => {
+    card.style.height = "";
+    const front = card.querySelector(".team-card-front");
+    card.style.height = `${Math.max(card.offsetHeight, front.scrollHeight + 4)}px`;
+  });
+}
+
+window.addEventListener("resize", fitTeamCards);
 
 // This helper shows a few prepared answers to questions.
 function renderAssistant() {

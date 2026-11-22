@@ -223,7 +223,7 @@ button { font: inherit; }
 .team-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(1rem, 2.5vw, 1.8rem); }
 .team-card { position: relative; width: 100%; min-width: 0; min-height: 390px; padding: 0; border: 0; outline: none; background: transparent; color: inherit; cursor: pointer; font: inherit; text-align: left; }
 .team-card:focus-visible { outline: 3px solid var(--garnet); outline-offset: 5px; }
-.team-card-inner { position: relative; min-height: inherit; height: 100%; transform-style: preserve-3d; }
+.team-card-inner { position: relative; display: block; min-width: 100%; min-height: inherit; height: 100%; transform-style: preserve-3d; }
 .team-card[data-expanded="true"] .team-card-inner { transform: rotateY(180deg); }
 .team-card-face { position: absolute; inset: 0; display: flex; flex-direction: column; min-height: 390px; padding: clamp(1.25rem, 2.3vw, 1.8rem); overflow: hidden; border: 1px solid var(--line); border-top: 3px solid var(--garnet); background: var(--paper); box-shadow: 0 12px 26px rgba(20,12,16,.09); backface-visibility: hidden; transform-style: preserve-3d; }
 .team-card-back { transform: rotateY(180deg); }
