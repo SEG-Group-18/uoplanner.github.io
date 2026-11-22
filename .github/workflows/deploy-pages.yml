@@ -1,0 +1,55 @@
+name: Deploy uoplanner
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Prepare site
+        run: |
+          mkdir -p _site
+          cp "Web Pages/html pages/"*.html _site/
+          cp -R "Web Pages/css pages" _site/
+          cp -R "Web Pages/js pages" _site/
+          cp -R public _site/
+          sed -i \
+            -e 's|../css%20pages/|css%20pages/|g' \
+            -e 's|../js%20pages/|js%20pages/|g' \
+            -e 's|/public/|public/|g' \
+            _site/*.html
+          sed -i 's|/public/|public/|g' \
+            "_site/js pages/app.js" \
+            "_site/css pages/styles.css"
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
